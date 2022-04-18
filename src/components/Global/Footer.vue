@@ -1,0 +1,173 @@
+<template>
+  <footer class="footNote">
+    <section class="footLinks dFlex">
+      <nav class="socialLinks dFlex justifyBetween">
+        <section class="linkBlock dFlex">
+          <img src="../../../src/assets/social.png" class="mAuto" alt="S">
+        </section>
+        <section class="linkBlock dFlex">
+          <img src="../../../src/assets/fb.png" class="mAuto" alt="S">
+        </section>
+        <section class="linkBlock dFlex">
+          <img src="../../../src/assets/linkedin.png" class="mAuto" alt="L">
+        </section>
+        <section class="linkBlock dFlex">
+          <img src="../../../src/assets/twitter.png" class="mAuto" alt="T">
+        </section>
+        <section class="linkBlock dFlex">
+          <img src="../../../src/assets/youtube.png" class="mAuto" alt="Y">
+        </section>
+      </nav>
+      <aside class="inHouseLinks">
+        <article class="listLink">
+          <p>Product Finder</p>
+        </article>
+        <article class="listLink">
+          <p>About</p>
+        </article>
+        <article class="listLink">
+          <p>Contact</p>
+        </article>
+        <article class="listLink">
+          <p>About Wrhouze</p>
+        </article>
+        <article class="listLink">
+          <p>Projects</p>
+        </article>
+        <article class="listLink">
+          <p>FAQ</p>
+        </article>
+        <article class="listLink">
+          <p>Corporate Website</p>
+        </article>
+      </aside>
+    </section>
+    <article class="copyRight">
+      <section class="dFlex justifyCenter">
+        <p>Copyright &#169; 2021 Wrhouze. All rights reserved</p>
+        <p class="onlyWeb">&#124;</p>
+        <p>Terms of use</p>
+        <p class="onlyWeb">&#124;</p>
+        <p>Privacy Policy</p>
+      </section>
+    </article>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: "FootNote"
+}
+</script>
+
+<style scoped>
+.dFlex {
+  display: flex;
+}
+.mAuto {
+  margin: auto;
+}
+.justifyCenter {
+  justify-content: center;
+}
+.justifyBetween {
+  justify-content: space-between;
+}
+.footNote {
+  background-color: rgba(0, 0, 0, 0.66);
+}
+.footNote .footLinks {
+  padding: 100px 0 120px;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.socialLinks {
+  width: 240px;
+}
+.socialLinks .linkBlock {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  /*background-color: rgba(255, 255, 255, 0.9);*/
+}
+.inHouseLinks {
+  width: 840px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+.inHouseLinks .listLink {
+  text-align: center;
+}
+.inHouseLinks .listLink p {
+  margin: 0;
+  text-align: left;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+.copyRight {
+  padding: 40px 0;
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+.copyRight > section {
+  max-width: 1080px;
+  text-align: center;
+  margin: 0 auto;
+}
+.copyRight p {
+  margin: 0;
+  padding: 0 5px;
+}
+@media (max-width: 1620px) {
+  .footNote .footLinks {
+    max-width: 90%;
+  }
+  .inHouseLinks {
+    width: 660px;
+  }
+}
+@media (max-width: 1200px) {
+  .inHouseLinks {
+    width: 580px;
+  }
+}
+@media (max-width: 1080px) {
+  .footLinks {
+    flex-direction: column;
+  }
+  .socialLinks {
+    margin: 0 auto 36px;
+  }
+  .inHouseLinks {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 991px) {
+  .inHouseLinks {
+    grid-gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .onlyWeb {
+    display: none;
+  }
+  .footNote .footLinks, .copyRight > section {
+    flex-direction: column;
+  }
+  .copyRight > section p {
+    padding-bottom: 8px;
+  }
+  .inHouseLinks {
+    max-width: 80%;
+    margin: 0 auto;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+  .inHouseLinks .listLink p {
+    text-align: center;
+  }
+}
+</style>
