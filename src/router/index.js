@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue';
 import Builder from "@/views/Builder";
 import Blog from "@/views/Blog";
 import Contact from "@/views/Contact.vue";
+import Account from "@/views/Account.vue";
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/myAccount',
+    name: 'MyAccount',
+    component: Account
   }
   // {
   //   path: '/about',
