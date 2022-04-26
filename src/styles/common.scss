@@ -1,0 +1,67 @@
+.container {
+  width: 1596px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+@media (max-width: 1619px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media (max-width: 1224px) {
+  .container {
+    width: 991px;
+    padding: 0 36px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 791px) {
+  .container {
+    width: 568px;
+  }
+}
+@media (max-width: 591px) {
+  .container {
+    width: 400px;
+    padding: 0 24px;
+  }
+}
+@media (max-width: 399px) {
+  .container {
+    width: 375px;
+  }
+}
+@media (max-width: 374px) {
+  .container {
+    width: 320px;
+    padding: 0 20px;
+  }
+}
+
+.ellipsisLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis2Lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+.ellipsis3Lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
