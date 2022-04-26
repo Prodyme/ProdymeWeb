@@ -1,22 +1,9 @@
 <template>
     <section class="mainAccContainer">
         <div class="main">
-            <div class="banner-card">
-                <img src="https://www.accruent.com/static/b3c4e13c979e79696ed8a9b9ca6d5bc1/7d7d1/accruent_resources_blog-entries_what-are-the-five-phases-of-the-construction-life-cycle-_hero.jpg" alt="Image" style="height: 50vh; width: 100vw">
-                <div class="banner-text">
-                    <h6>Home / <span>My Account</span></h6>
-                    <h1>My Account</h1>
-                </div> 
-            </div>
+            <BannerCard></BannerCard>
             <div class="account-details">
-                <div class="acc-heading">
-                    <router-link to="/myAccount"><h1>MY PROFILE</h1></router-link>
-                    <h1 class="active">MY MESSAGES</h1>
-                    <router-link to="/myOrders"><h1>MY ORDERS</h1></router-link>
-                    <router-link to="/myDesigns"><h1>MY DESIGNS</h1></router-link>
-                    <router-link to="/myWishlist"><h1>WISHLIST</h1></router-link>
-                </div>
-                <hr class="line-color">
+                <AccHeader></AccHeader>
                 <p class="info">Please note you can only view the queries sent by you and response will be sent via email.</p>
 
                 <div class="message-status">
@@ -124,10 +111,14 @@
 
 <script>
 import Footer from "@/components/Global/Footer.vue";
+import BannerCard from "@/views/Banner.vue";
+import AccHeader from "@/views/AccHeader.vue";
 export default {
     name: 'myMessages',
     components: {
         Footer,
+        BannerCard,
+        AccHeader,
     }
 }
 </script>
@@ -136,35 +127,6 @@ export default {
     *{
         margin: 0;
         padding: 0;
-    }
-    .banner-card{
-        position: relative;
-        background-color: black;
-    }
-    .banner-card img{
-        height: 50vh;
-        /* width: 100vw; */
-        opacity: 0.3;
-    }
-    .banner-text{
-        position: absolute;
-        top: 15%;
-        left: 18%;
-        padding: 20px;
-    }
-    .banner-text h6,.banner-text h1{
-        color: white;
-    }
-    .banner-text h6{
-        font-size: 0.8rem;
-        font-weight:300;
-    }
-    .banner-text span{
-        font-weight: bold;
-    }
-    .banner-text h1{
-        font-size: 3rem;
-        font-weight: 300;
     }
     .account-details{
         background-color: white;
@@ -177,47 +139,6 @@ export default {
         padding: 40px 80px;
         border: 1px solid rgb(202, 202, 202);
 
-    }
-    .acc-heading{
-        display: flex;
-       width: 60vw;
-       justify-content: space-between;
-    }
-    /* .acc-heading:after{
-        content: '';
-        height: 0.2rem;
-        width: 6rem;
-        background-color: #FF7A34;
-        border-radius: 60px 60px 0 0;
-        position: absolute;
-        bottom: 104vw;
-        left: 30vw;
-    } */
-    .acc-heading h1{
-        font-size: 1rem;
-        padding-bottom: 12px;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-    .acc-heading h1{
-        font-size: 1rem;
-        padding-bottom: 12px;
-        cursor: pointer;
-    }
-    .acc-heading .active{
-        color: #FF7A34;
-        font-weight: bold;
-    }
-    .acc-heading h1:hover{
-        color: #FF7A34;
-    }
-    .line-color {
-        border-color: #FF7A34;
-        border-top: none;
-    }
-    hr{
-        border-color: #d9d9d9;
-        border-top: none;
     }
     .info{
         margin-top: 1.5rem;

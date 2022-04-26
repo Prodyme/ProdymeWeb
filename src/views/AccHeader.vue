@@ -1,7 +1,7 @@
 <template>
 <section class="main">
     <div class="acc-heading">
-        <h1 class="active">MY PROFILE</h1>
+        <router-link to="/myAccount"><h1>MY PROFILE</h1></router-link>
         <router-link to="/myMessages"><h1>MY MESSAGES</h1></router-link>
         <router-link to="/myOrders"><h1>MY ORDERS</h1></router-link>
         <router-link to="/myDesigns"><h1>MY DESIGNS</h1></router-link>
@@ -45,5 +45,15 @@ export default{
     }
     .acc-heading h1:hover{
         color: #FF7A34;
+    }
+
+    @media (max-width: 500px) {
+        .acc-heading h1{
+            font-size: 0.6rem;
+            justify-content: space-around;
+            margin-right: 1rem;
+            padding-bottom: 8px;
+            display: flex;
+        }
     }
 </style>

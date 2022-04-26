@@ -1,24 +1,8 @@
 <template>
     <section class="mainAccContainer">
         <div class="main">
-            <!-- <div class="banner-card">
-                <img src="https://www.accruent.com/static/b3c4e13c979e79696ed8a9b9ca6d5bc1/7d7d1/accruent_resources_blog-entries_what-are-the-five-phases-of-the-construction-life-cycle-_hero.jpg" alt="Image" style="height: 50vh; width: 100vw">
-                <div class="banner-text">
-                    <h6>Home / <span>My Account</span></h6>
-                    <h1>My Account</h1>
-                </div> 
-            </div> -->
             <BannerCard></BannerCard>
             <div class="account-details">
-                <!-- <div class="acc-heading">
-                    <h1 class="active">MY PROFILE</h1>
-                    <router-link to="/myMessages"><h1>MY MESSAGES</h1></router-link>
-                    <router-link to="/myOrders"><h1>MY ORDERS</h1></router-link>
-                    <router-link to="/myDesigns"><h1>MY DESIGNS</h1></router-link>
-                    <router-link to="/myWishlist"><h1>WISHLIST</h1></router-link>
-                    
-                </div>
-                <hr class="line-color"> -->
                 <AccHeader></AccHeader>
                 <div class="personal-details-cont">
                     <div class="Cont-heading">
@@ -198,6 +182,12 @@ export default {
         border-radius: 5px;
         padding: 40px 80px;
         border: 1px solid rgb(202, 202, 202);
+    }
+    @media (max-width: 500px) {
+        .account-details{
+            top: 35%;
+            padding: 20px 15px;
+        }
     }
     .personal-details-cont{
         margin-top: 1rem;
