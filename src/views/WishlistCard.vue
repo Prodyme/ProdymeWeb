@@ -98,8 +98,8 @@ export default {
    font-size: 0.9rem;
   }
   hr{
-        border-color: #d9d9d9;
-        border-top: none;
+    border-color: #d9d9d9;
+    border-top: none;
   }
   .price{
     font-size: 1rem;
@@ -137,6 +137,54 @@ export default {
     width: 17%;
     text-align: center;
     border: none;
+  }
+  @media (max-width: 425px) {
+    .card-body{
+      width: 9rem;
+      height: 18rem;
+      padding: 6px;
+      margin: 1rem 0rem;
+    }
+    .action{
+      font-size: 0.9rem;
+    }
+    .item-image{
+      margin-top: 0.2rem;
+    }
+    .item-image img{
+      width: 8rem;
+      height: 6rem;
+    }
+    .item-image p{
+      margin-left: 0rem;
+      font-size: 0.6rem;
+    }
+    .rating{
+      font-size: 0.6rem;
+    }
+    .price{
+      font-size: 0.7rem;
+    }
+    .price span{
+      font-size: 0.6rem;
+    }
+    .btn .icon{
+      font-size: 0.5rem;  
+    }
+    .quantity{
+      flex-direction: column;
+    }
+    .input-box{
+      width: 16%;
+    }
+    .checkbox{
+      font-size: 0.7rem;
+    }
+  }
+  @media (max-width: 380px){
+    .card-body{
+      margin: 0rem 0.1ren;
+   }
   }
   
 </style>

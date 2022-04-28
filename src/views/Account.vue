@@ -183,12 +183,6 @@ export default {
         padding: 40px 80px;
         border: 1px solid rgb(202, 202, 202);
     }
-    @media (max-width: 500px) {
-        .account-details{
-            top: 35%;
-            padding: 20px 15px;
-        }
-    }
     .personal-details-cont{
         margin-top: 1rem;
     }
@@ -346,7 +340,58 @@ export default {
     Footer{
         margin-top: 70rem;
     }
-    
+    @media (max-width: 425px) {
+        .account-details{
+            top: 35%;
+            padding: 20px 15px;
+            width: 94vw;
+            left: 3%;
+        }
+        .Cont-heading h2{
+            font-size: 1.1rem;
+        }
+        .Cont-heading a{
+            font-size: 0.6rem;
+        }
+        .updates label{
+            font-size: 0.6rem;
+        }
+        .instruct{
+            font-size: 0.6rem;
+        }
+        .passwords input{
+            width: 35vw;
+            padding: 5px;
+        }
+        .passwords{
+            width: 50vw;
+        }
+        .instructions li{
+            font-size: 0.6rem;
+        }
+        .btn{
+            padding: 8px;
+        }
+        Footer{
+            margin-top: 60rem;
+        }
+    }
+    @media (max-width: 380px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100%;
+            left: 0%;
+            top: 20%;
+        }
+    }
+    @media (max-width: 350px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100vw;
+            left: 0%;
+            top: 35%;
+        }
+    }
 
     /* doubts */
     /* 1. arrows of carousel , how to change the color of ant checkbox and radio buttons*/

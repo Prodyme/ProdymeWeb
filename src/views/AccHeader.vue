@@ -47,13 +47,17 @@ export default{
         color: #FF7A34;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 425px) {
+        .acc-heading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: unset;
+        }
         .acc-heading h1{
             font-size: 0.6rem;
-            justify-content: space-around;
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             padding-bottom: 8px;
-            display: flex;
         }
     }
 </style>

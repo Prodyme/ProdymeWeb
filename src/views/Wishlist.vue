@@ -98,4 +98,38 @@ export default {
     Footer{
         margin-top: 60rem;
     }
+      @media (max-width: 425px) {
+        .account-details{
+            top: 35%;
+            padding: 20px 15px;
+            width: 94vw;
+            left: 3%;
+        }
+        .input-bar{
+            font-size: 0.7rem;
+        }
+        Footer{
+            margin-top: 70rem;
+        }
+    }
+    @media (max-width: 380px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100%;
+            left: 0%;
+            top: 20%;
+        }
+        
+        Footer{
+            margin-top: 55vw;
+        }
+    }
+    @media (max-width: 350px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100vw;
+            left: 0%;
+            top: 35%;
+        }
+    }
 </style>    

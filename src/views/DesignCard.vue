@@ -62,4 +62,31 @@
         background-color: #FF7A34;
         color: white;
     }
+    @media (max-width: 425px) {
+        .card-body{
+            width: 9rem;
+            height: 15rem;
+            padding: 8px;
+            margin: 1rem 0rem;
+        }
+        .card-img img{
+            width: 8rem;
+            height: 8rem;
+        }
+        .design-name{
+            font-size: 0.8rem;
+        }
+        .price{
+            font-size: 0.9rem;
+        }
+        .btn{
+            padding: 5px;
+            width: 8rem;
+        }
+    }
+    @media (max-width: 380px){
+        .card-body{
+            margin: 0rem 0.1ren;
+        }
+    }
 </style>

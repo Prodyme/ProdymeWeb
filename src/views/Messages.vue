@@ -25,7 +25,7 @@
                         </a-menu-item>
                         </a-menu>
                     </a-dropdown>
-                    <a-icon type="filter" style="font-size: 1rem; color: #FF7A34"/>
+                    <a-icon type="filter"  class="filter"/>
                     <div class="pages">
                         <a-icon type="left" />
                         <p>1 of 45</p>
@@ -44,7 +44,7 @@
                         <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates hic magni ullam.</p>
                     </div>
                     <div class="links">
-                        <a-icon type="link" style="color: #FF7A34; font-size: 1.2rem"/>
+                        <a-icon type="link" class="link" style="color: #FF7A34; font-size: 1.2rem"/>
                         <a href="" class="files">Filename ABC</a>
                         <a href="" class="files">Filename ABC</a>
                         <a href="" class="files">Filename ABC</a>
@@ -64,7 +64,7 @@
                         <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates hic magni ullam.</p>
                     </div>
                     <div class="links">
-                        <a-icon type="link" style="color: #FF7A34; font-size: 1.2rem"/>
+                        <a-icon type="link" class="link" style="color: #FF7A34; font-size: 1.2rem"/>
                         <a href="" class="files">Filename ABC</a>
                     </div>
                     <p class="details">View Details <span><a-icon type="down" /></span></p>
@@ -81,7 +81,7 @@
                         <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates hic magni ullam.</p>
                     </div>
                     <div class="links">
-                        <a-icon type="link" style="color: #FF7A34; font-size: 1.2rem"/>
+                        <a-icon type="link" class="link" style="color: #FF7A34; font-size: 1.2rem"/>
                         <a href="" class="files">Filename ABC</a>
                     </div>
                     <p class="details">View Details <span><a-icon type="down" /></span></p>
@@ -98,7 +98,7 @@
                         <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates hic magni ullam.</p>
                     </div>
                     <div class="links">
-                        <a-icon type="link" style="color: #FF7A34; font-size: 1.2rem"/> 
+                        <a-icon type="link" class="link" style="color: #FF7A34; font-size: 1.2rem"/> 
                         <p style="margin-left: 0.3rem">None</p>
                     </div>
                     <p class="details">View Details <span><a-icon type="down" /></span></p>
@@ -224,6 +224,10 @@ export default {
         color: black;
         font-weight: 300;
     }
+    .link{
+        color: #FF7A34; 
+        font-size: 1.2rem;
+    }
     .links{
         margin-top: 0.3rem;
         display: flex;
@@ -251,6 +255,93 @@ export default {
     }
     Footer{
         margin-top: 60rem;
+    }
+    @media (max-width: 425px) {
+        .account-details{
+            top: 35%;
+            padding: 20px 15px;
+            width: 94vw;
+            left: 3%;
+        }
+        .info{
+            font-size: 0.7rem;
+        }
+        .messageNum{
+            font-size: 0.7rem;
+            margin-right: 3rem;
+        }
+        .ant-dropdown-link{
+            font-size: 0.6rem;
+            margin-right: 1rem;
+        }
+        .filter{
+            font-size: 0.7rem;
+        }
+        .pages{
+            margin-left: 1rem;
+        }
+        .pages p{
+            font-size: 0.7rem;
+        }
+        .messages-cont{
+            padding: 0.5rem;
+        }
+        .date{
+            font-size: 0.65rem;
+            margin-right: 1rem;
+        }
+        .orderdetails{
+            font-size: 0.6rem;
+            margin-right: 1rem;
+        }
+        .btn{
+            padding: 0.2rem 0.3rem;
+            font-size: 0.6rem;
+        }
+        .message-heading{
+            font-size: 0.8rem;
+        }
+        .content{
+            font-size: 0.7rem;
+        }
+        .link{
+            font-size: 0.5rem;
+        }
+        .files{
+            margin-right: 0.2rem;
+            font-size: 0.6rem;
+        }
+        .details{
+            font-size: 0.7rem;
+        }
+        .details span{
+            font-size: 0.7rem;
+        }
+        Footer{
+            margin-top: 55rem;
+        }
+    }
+    @media (max-width: 380px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100%;
+            left: 0%;
+            top: 20%;
+        }
+        .messageNum{
+            margin-right: 2rem;
+        }
+        Footer{
+            margin-top: 55vw;
+        }
+    }
+    @media (max-width: 350px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100vw;
+            left: 0%;
+            top: 35%;
+        }
     }
    
 </style>  

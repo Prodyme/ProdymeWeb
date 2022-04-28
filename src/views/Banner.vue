@@ -49,10 +49,10 @@ export default{
         font-size: 3rem;
         font-weight: 300;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 425px) {
         .banner-img{
             max-width: 100%;
-            max-height: 60vh;
+            max-height: 40vh;
         }
         .banner-text{
             top: 5%;
@@ -62,6 +62,11 @@ export default{
         }
         .banner-text h1{
             font-size: 2rem;
+        }
+    }
+    @media (max-width: 350px){
+        .banner-img{
+           width: 200%;
         }
     }
 </style>

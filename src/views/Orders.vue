@@ -30,9 +30,9 @@
                                 </a-menu>
                                 </template>
                             </a-dropdown>
-                        </div>
                         <a-icon type="calendar" class="icon"/>
                         <button class="btn">Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="orders-table">
@@ -47,7 +47,7 @@
                         <a-col :span="3" :order="3">
                             Estimated Delivery Date
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 3.8rem">
+                        <a-col :span="4" :order="4" class="custom-col">
                            Order Total
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -69,7 +69,7 @@
                         <a-col :span="3" :order="3">
                             MM-DD-YYYY
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 4rem; display: flex; align-items: center">
+                        <a-col :span="4" :order="4" class="custom-content-col">
                            <p>Rs.2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -91,7 +91,7 @@
                         <a-col :span="3" :order="3">
                             MM-DD-YYYY
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 4rem">
+                        <a-col :span="4" :order="4" class="custom-content-col">
                            <p>Rs.2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -113,7 +113,7 @@
                         <a-col :span="3" :order="3">
                             MM-DD-YYYY
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 4rem">
+                        <a-col :span="4" :order="4" class="custom-content-col">
                            <p>Rs.2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -135,7 +135,7 @@
                         <a-col :span="3" :order="3">
                             MM-DD-YYYY
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 4rem">
+                        <a-col :span="4" :order="4" class="custom-content-col">
                            <p>Rs.2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -156,7 +156,7 @@
                         <a-col :span="3" :order="3">
                             MM-DD-YYYY
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 4rem">
+                        <a-col :span="4" :order="4" class="custom-content-col">
                            <p>Rs.2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -178,7 +178,7 @@
                         <a-col :span="3" :order="3">
                             MM-DD-YYYY
                         </a-col>
-                        <a-col :span="4" :order="4" style="margin-left: 4rem">
+                        <a-col :span="4" :order="4" class="custom-content-col">
                            <p>Rs.2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
@@ -293,6 +293,12 @@ export default {
         font-weight: 700;
         font-size: 0.9rem;
     }
+    .custom-col{
+        margin-left: 3.8rem
+    }
+    .custom-content-col{
+        margin-left: 4rem
+    }
     .orders-table-content{
         /* border: 1px solid blueviolet; */
         margin-top: 0.5rem;
@@ -365,5 +371,82 @@ export default {
     }
     Footer{
         margin-top: 8rem;
+    }
+      @media (max-width: 425px) {
+        .account-details{
+            top: 35%;
+            padding: 20px 10px;
+            width: 100vw;
+            left: 0%;
+        }
+        .Cont-heading{
+            font-size: 1rem;
+        }
+        .filters{
+            flex-direction: column;
+        }
+        .date-filter{
+            display: flex;
+            align-items: center;
+        }
+        .input-bar{
+            padding: 5px 7px;
+        }
+        .orders-table-header{
+            padding: 5px;
+            font-size: 0.6rem;
+        }
+        .custom-col, .custom-content-col{
+            margin-left: 1.8rem
+        }
+        .content-rows{
+            padding: 3px;
+            font-size: 0.6rem;
+        }
+        .status-btn {
+            width: 4rem;
+            padding: 3px 3px;
+            font-size: 0.6rem;
+        }
+        .table-icon{
+            font-size: 1rem;
+        }
+        .help{
+            margin-left: unset;
+            width: 23rem;
+            padding: 7px;
+        }
+        .help h1{
+            font-size: 1.5rem;
+            justify-content: flex-start;
+            word-wrap: break-word;
+        }
+        .help h3{
+            font-size: 0.9rem;
+            padding-right: unset;
+        }
+        .helpbtn{
+            margin-left: unset;
+        }
+    }
+    @media (max-width: 380px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100vw;
+            left: 0%;
+            top: 20%;
+        }
+       
+        Footer{
+            margin-top: 55vw;
+        }
+    }
+    @media (max-width: 350px){
+        .account-details{
+            padding: 20px 24px;
+            width: 100vw;
+            left: 0%;
+            top: 35%;
+        }
     }
 </style>    
