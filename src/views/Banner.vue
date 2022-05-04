@@ -2,7 +2,7 @@
     <div class="banner-card">
         <img src="https://www.accruent.com/static/b3c4e13c979e79696ed8a9b9ca6d5bc1/7d7d1/accruent_resources_blog-entries_what-are-the-five-phases-of-the-construction-life-cycle-_hero.jpg" alt="Image" style="height: 50vh; width: 100vw">
         <div class="banner-text">
-            <h6>Home / <span>My Account</span></h6>
+            <h6><router-link to="/" style="color: white; text-decoration: none">Home / </router-link> <span> My Account</span></h6>
             <h1>My Account</h1>
         </div> 
     </div>
