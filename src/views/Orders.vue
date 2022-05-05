@@ -70,7 +70,7 @@
                             MM-DD-YYYY
                         </a-col>
                         <a-col :span="4" :order="4" class="custom-content-col">
-                           <p>Rs.2100.58</p>
+                           <p>₹2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
                             <button class="status-btn in-progress">In Progress</button>
@@ -92,7 +92,7 @@
                             MM-DD-YYYY
                         </a-col>
                         <a-col :span="4" :order="4" class="custom-content-col">
-                           <p>Rs.2100.58</p>
+                           <p>₹2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
                             <button class="status-btn cancelled">Cancelled</button>
@@ -114,7 +114,7 @@
                             MM-DD-YYYY
                         </a-col>
                         <a-col :span="4" :order="4" class="custom-content-col">
-                           <p>Rs.2100.58</p>
+                           <p>₹2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
                             <button class="status-btn in-progress">In Progress</button>
@@ -136,7 +136,7 @@
                             MM-DD-YYYY
                         </a-col>
                         <a-col :span="4" :order="4" class="custom-content-col">
-                           <p>Rs.2100.58</p>
+                           <p>₹2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
                             <button class="status-btn shipped">Shipped</button>
@@ -157,7 +157,7 @@
                             MM-DD-YYYY
                         </a-col>
                         <a-col :span="4" :order="4" class="custom-content-col">
-                           <p>Rs.2100.58</p>
+                           <p>₹2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
                             <button class="status-btn in-progress">In Progress</button>
@@ -179,7 +179,7 @@
                             MM-DD-YYYY
                         </a-col>
                         <a-col :span="4" :order="4" class="custom-content-col">
-                           <p>Rs.2100.58</p>
+                           <p>₹2100.58</p>
                         </a-col>
                         <a-col :span="5" :order="5">
                             <button class="status-btn shipped">Shipped</button>

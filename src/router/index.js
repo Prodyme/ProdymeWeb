@@ -9,8 +9,8 @@ import Orders from "@/views/Orders.vue";
 import Designs from "@/views/Design.vue";
 import Wishlist from "@/views/Wishlist.vue";
 import Messages from "@/views/Messages.vue";
-import Test from "@/views/Test.vue";
 import SmartBuilder from "@/views/SmartBuilder.vue"
+import SmartBuilderBasket from "@/views/SmartBuilderBasket.vue"
 
 Vue.use(VueRouter)
 
@@ -64,14 +64,14 @@ const routes = [
     component: Messages
   },
   {
-    path: '/Test',
-    name: 'Test',
-    component: Test
-  },
-  {
     path: '/SmartBuilder',
     name: 'SmartBuilder',
     component: SmartBuilder
+  },
+  {
+    path: '/Basket',
+    name: 'SmartBuilderBasket',
+    component: SmartBuilderBasket
   },
   // {
   //   path: '/about',

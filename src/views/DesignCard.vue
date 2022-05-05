@@ -5,10 +5,11 @@
         </div>
         <div class="card-content">
             <h2 class="design-name">Design Name ABC</h2>
-            <h1 class="price">210.58 Rupees</h1>
+            <h1 class="price">₹210.58</h1>
         </div>
         <div class="card-btn">
             <button class="btn">Continue Design</button>
+            <a-icon type="delete" class="icon"/>
         </div>
     </div>
 </template>
@@ -49,9 +50,13 @@
         color: black;
         margin-bottom: 0px;
     }
+    .card-btn{
+        display: flex;
+        align-items: center;
+    }
     .btn{
         padding: 5px;
-        width: 10rem;
+        width: 9rem;
         background-color: white;
         border: 1px solid #FF7A34;
         color: #FF7A34;
@@ -61,6 +66,12 @@
     .btn:hover{
         background-color: #FF7A34;
         color: white;
+    }
+    .icon{
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        color: #FF7A34;
+        cursor: pointer;
     }
     @media (max-width: 425px) {
         .card-body{

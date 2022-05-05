@@ -52,7 +52,7 @@
         <div class="settings">
             <p><a-icon type="redo" />Reset To Original</p>
             <button class="btn randomize">Randomize</button>
-            <button class="btn proceed">Proceed</button>
+            <router-link to="/Basket"><button class="btn proceed">Proceed</button></router-link>
         </div>
       </a-col>
       <a-col :span="12" class="col2">

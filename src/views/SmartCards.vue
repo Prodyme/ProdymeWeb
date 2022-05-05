@@ -11,7 +11,7 @@
         <p class="item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nam at non odio vero laboriosam quaerat, laudantium nostrum rem deserunt, assumenda, asperiores amet!</p>
         <hr>
         <div class="price">
-            <h3>21.58 Rupees <span>per box</span></h3>
+            <h3>₹21.58 <span>per box</span></h3>
         </div>
         <div class="quantity">
             <a-checkbox @change="onChange" class="checkbox">
@@ -38,7 +38,7 @@ export default {
     width: 16rem;
     padding: 0.9rem;
     background-color: white;
-    margin: 2rem 1rem 2rem 0rem;
+    margin: 1rem 1rem 2rem 0rem;
     box-shadow: 3px 3px 6px #00000029;
   }
   .card-body:hover{

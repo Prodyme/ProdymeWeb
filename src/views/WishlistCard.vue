@@ -10,7 +10,7 @@
         <a-rate v-model="value" class="rating"/>
         <hr>
         <div class="price">
-            <h3>21.58 Rupees <span>per box</span></h3>
+            <h3>₹21.58 <span>per box</span></h3>
         </div>
         <div class="quantity">
           <div class="noOfItems">

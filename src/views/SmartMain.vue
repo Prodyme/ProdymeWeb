@@ -72,9 +72,11 @@ export default {
         font-size: 2.5rem;
         margin-bottom: unset;
         color: #2A2A2A;
+        font-weight: 490;
     }
     .banner-text h2{
         font-size: 1.1rem;
+        font-weight: 400;
     }
     .categories ul{
         display: flex;
