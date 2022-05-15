@@ -3,13 +3,19 @@ import VueRouter from 'vue-router';
 import Home from '@/views/Home.vue';
 import Builder from "@/views/Builder";
 
-
 // To be Reviewed
 import Blog from "@/views/Blog";
 import Contact from "@/views/Contact.vue";
 import Search from "@/views/SearchPage.vue";
 import Category from "@/views/Category.vue";
 import Filter from "@/views/Filter.vue";
+
+import Orders from "@/views/Orders.vue";
+import Designs from "@/views/Design.vue";
+import Wishlist from "@/views/Wishlist.vue";
+import Messages from "@/views/Messages.vue";
+import SmartBuilder from "@/views/SmartBuilder.vue"
+import SmartBuilderBasket from "@/views/SmartBuilderBasket.vue"
 
 import Account from "@/views/Account.vue";
 import Checkout from "@/views/CheckFlow.vue";
@@ -84,6 +90,36 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: Search
+  },
+  {
+    path: '/myOrders',
+    name: 'MyOrders',
+    component: Orders
+  },
+  {
+    path: '/myDesigns',
+    name: 'MyDesigns',
+    component: Designs
+  },
+  {
+    path: '/myWishlist',
+    name: 'Wishlist',
+    component: Wishlist
+  },
+  {
+    path: '/myMessages',
+    name: 'myMessages',
+    component: Messages
+  },
+  {
+    path: '/SmartBuilder',
+    name: 'SmartBuilder',
+    component: SmartBuilder
+  },
+  {
+    path: '/Basket',
+    name: 'SmartBuilderBasket',
+    component: SmartBuilderBasket
   }
   // {
   //   path: '/about',

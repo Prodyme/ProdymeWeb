@@ -5,6 +5,7 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import LottieAnimation from 'lottie-web-vue'
 
+
 // To be Reviewed
 
 import { library } from '@fortawesome/fontawesome-svg-core'
