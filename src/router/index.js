@@ -6,6 +6,7 @@ import Blog from "@/views/Blog";
 import Contact from "@/views/Contact.vue";
 
 // To be Reviewed
+import Account from "@/views/Account.vue";
 import Checkout from "@/views/CheckFlow.vue";
 import ContactDetails from '../views/ContactDetails.vue';
 import ThankYouPage from '../views/ThankYouPage.vue';
@@ -39,6 +40,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/myAccount',
+    name: 'MyAccount',
+    component: Account
   },
   {
     path: '/checkout',
