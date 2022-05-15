@@ -694,6 +694,31 @@ export default {
           container: "Boxes",
           unit: "100 sq ft",
           price: 27.65
+        },
+        {
+          image: "http://placehold.it/300x300",
+          name: "Product Name 3",
+          quantity: 12,
+          description: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore",
+          container: "Boxes",
+          unit: "100 sq ft",
+          price: 27.65
+        },{
+          image: "http://placehold.it/300x300",
+          name: "Product Name 3",
+          quantity: 12,
+          description: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore",
+          container: "Boxes",
+          unit: "100 sq ft",
+          price: 27.65
+        },{
+          image: "http://placehold.it/300x300",
+          name: "Product Name 3",
+          quantity: 12,
+          description: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore",
+          container: "Boxes",
+          unit: "100 sq ft",
+          price: 27.65
         }
       ],
       checkoutProducts2: [

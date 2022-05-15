@@ -2,7 +2,7 @@
   <section class="pt30 pb70 backBg products">
     <section class="container">
       <header class="heading textCenter">
-        <h2>Recommended Products</h2>
+        <p class="header-class">Products you may like</p>
       </header>
       <aside>
         <slick ref="slick" :options="slickOptions">
@@ -42,7 +42,7 @@ export default {
         autoplaySpeed: 4000,
         arrows: false,
         mobileFirst: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         centerMode: false,
         prevArrow: "<button type='button' :disabled='(currentSlide === 1) ? true : false' class='carouselSideArrow leftSide'><span class='dirIcon'>&#8735;</span></button>",
         nextArrow: "<button type='button' class='carouselSideArrow rightSide'><span class='dirIcon'>&#8735;</span></button>",
@@ -135,9 +135,21 @@ export default {
 }
 </script>
 
-<style scoped>
-.backBg {
-  background-color: #f8f8f8;
+<style>
+/*.backBg {*/
+/*  background-color: #f8f8f8;*/
+/*}*/
+.products{
+  width:1475px
+}
+.container{
+  border-radius: 0;
+}
+.header-class{
+  text-align: left;
+  margin-left: 5rem;
+  font: normal normal bold 28px/34px Roboto;
+  color: #2A2A2A;
 }
 .dFlex {
   display: flex;

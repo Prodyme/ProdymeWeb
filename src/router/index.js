@@ -5,6 +5,15 @@ import Builder from "@/views/Builder";
 import Blog from "@/views/Blog";
 import Contact from "@/views/Contact.vue";
 
+// To be Reviewed
+import Checkout from "@/views/CheckFlow.vue";
+import ContactDetails from '../views/ContactDetails.vue';
+import ThankYouPage from '../views/ThankYouPage.vue';
+import BlogContent from '../views/BlogContent.vue';
+
+
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,6 +39,26 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/checkout',
+    name: 'CheckFlow',
+    component: Checkout
+  },
+  {
+    path: '/checkout-contactdetails',
+    name: 'ContactDetails',
+    component: ContactDetails
+  },
+  {
+    path:'/checkout-thankyou',
+    name: 'ThankYouPage',
+    component: ThankYouPage
+  },
+  {
+    path:'/journal-content',
+    name:BlogContent,
+    component:BlogContent
   }
   // {
   //   path: '/about',

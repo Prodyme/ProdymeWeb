@@ -1,46 +1,30 @@
 <template>
-  <section class="mainBg">
-    <!-- Top Bar -->
-    <TopBar></TopBar>
-    <!-- Banner -->
-    <Banner></Banner>
-    <!-- Offerings -->
-    <Offerings></Offerings>
-    <!-- Insights / Highlights -->
-    <Insights></Insights>
-    <!-- Product Variants -->
-    <Products></Products>
-    <!-- Connect Component -->
-    <Connect></Connect>
-    <!-- Footer Component -->
-    <FootNote></FootNote>
-  </section>
+  <a-row>
+    <a-col :span="4" class="cleft">
+      <Tree />
+    </a-col>
+    <a-col :span="20" class="cright">
+      <BlogComponent />
+    </a-col>
+  </a-row>
 </template>
 
 <script>
-// @ is an alias to /src
-import Connect from "@/components/Home/Connect/Connect";
-import FootNote from "@/components/Home/Footnote/FootNote";
-import TopBar from "@/components/Home/TopBar/TopBar";
-import Banner from "@/components/Home/Banner/Banner";
-import Offerings from "@/components/Home/Offerings/Offerings";
-import Insights from "@/components/Home/Insights/Insights";
-import Products from "@/components/Home/Products/Products";
+import BlogComponent from "../../../ProdymeWeb/src/components/Global/BlogComponent.vue";
+import Tree from "../../../ProdymeWeb/src/components/Global/Tree.vue";
 export default {
-  name: 'Blog',
-  components: {
-    Products,
-    Insights,
-    Offerings,
-    Banner,
-    TopBar,
-    Connect,
-    FootNote
-  }
+  components: { BlogComponent,
+    Tree }
 }
 </script>
-<style lang="scss">
-.mainBg {
-  background-color: #f8f8f8;
+
+<style scoped>
+.cleft {
+  background-color: #2a2a2a;
+  height:150rem;
+}
+.cright {
+  background-color: #F8F8F8;
+  height: 150rem;
 }
 </style>
