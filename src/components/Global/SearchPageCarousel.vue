@@ -1,10 +1,10 @@
 <template>
-  <div class="product-main-carousel" style="margin:0px 40px 0px 40px">
+  <div class="search-carousel" style="margin:0px 20px 0px 20px">
             <h2>Products on Sale!</h2>
-
+            
             <VueSlickCarousel v-bind="settings" :dots="false" :key="$route.fullPath">
-
-
+            
+               
                 <a-card :bordered="false">
                     <center>
                         <img src="../../assets/mountains.jpg" width="100px">
@@ -25,7 +25,7 @@
                     </a-checkbox>
                     </div>
                 </a-card>
-
+                
                 <a-card :bordered="false">
                     <center>
                         <img src="../../assets/mountains.jpg" width="100px">
@@ -114,26 +114,6 @@
                         </a-checkbox>
                     </a-card>
                 </div>
-                <div>
-                    <a-card :bordered="false">
-                        <center>
-                            <img src="../../assets/mountains.jpg" width="100px">
-                        </center>
-                        <div class="product-details-left">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</h4>
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                            <hr class="product-hr">
-                            <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                            <a-checkbox @change="onChange" class="product-checkbox">
-                                Add to Smart Builder
-                            </a-checkbox>
-                        </div>
-                    </a-card>
-                </div>
             </VueSlickCarousel>
         </div>
 </template>
@@ -145,11 +125,11 @@
     // optional style for arrows & dots
     import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default ({
-   name: 'MyCarousel',
+   name: 'SearchCarousel',
         components: {
             VueSlickCarousel,
-
-
+          
+         
         },
          data() {
             return {
@@ -158,8 +138,8 @@ export default ({
                     "focusOnSelect": true,
                     "infinite": true,
                     "speed": 500,
-                    "slidesToShow": 5,
-                    "slidesToScroll": 5,
+                    "slidesToShow": 4,
+                    "slidesToScroll": 4,
                     "touchThreshold": 5
                 },
             }
@@ -196,7 +176,7 @@ export default ({
 //         left: 20px;
 //         bottom:20px;
 //     }
-
+    
 
 //     .product-per-box {
 //         font-size: 106%;
@@ -213,9 +193,9 @@ export default ({
 //         border-bottom: none;
 //         border-top: 1px solid #D9D9D9;
 //     }
-// .product-main-carousel {
-//             padding: 40px;
-//                box-shadow: 3px 3px 20px #00000029;
-//             background-color: white;
-//         }
+.search-carousel {
+            padding: 20px;
+               box-shadow: 3px 3px 20px #00000029;
+            background-color: white;
+        }
 </style>

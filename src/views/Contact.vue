@@ -90,7 +90,7 @@
               <a-col :span="12" class="p-r-1p custom-upload-btn">
                 <small>Your files</small>
                 <a-upload name="file" :multiple="true"
-                          action="#" :headers="headers" @change="handleChange">
+                  action="#" :headers="headers" @change="handleChange">
                   <a-button>
                     <span class="place-holder">File name will appeare here...</span>
                     <a-icon type="upload" class="upload-icon" />
@@ -101,11 +101,11 @@
                 <br>
                 <p>
                   File Type supported: .pdf, .png, .docx, .jpg, .txt, .mp4, .HEIC</p>
-                <p>
+                  <p>
                   Size: less than 5MB</p>
-                <p>
-                  Max: up to 5 files
-                </p>
+                  <p>
+                    Max: up to 5 files
+                  </p>
               </a-col>
             </a-row>
           </div>
@@ -137,144 +137,149 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Footer from "@/components/Global/Footer.vue";
-export default {
-  name: 'Contact',
-  components: {
-    Footer
+  // @ is an alias to /src
+  import Footer from "@/components/Global/Footer.vue";
+  export default {
+    name: 'Contact',
+    components: {
+      Footer
 
+    }
   }
-}
 </script>
 <style lang="scss" scoped>
-template {
-  background-color: #F8F8F8;
-}
-
-.contact-us {
-  margin: 20px;
-  margin-top: 0px;
-  background-color: #F8F8F8;
-}
-
-.contact-main {
-  background-color: #fff;
-  margin: 100px;
-}
-
-.input-part {
-  padding: 80px;
-}
-
-.line-color {
-  border-color: #FF7A34;
-  border-top: none;
-}
-
-hr {
-  border-color: #d9d9d9;
-  border-top: none;
-}
-
-.move-right {
-  float: right;
-}
-
-textarea.ant-input {
-  resize: none;
-}
-
-.ant-input:placeholder-shown {
-  font-style: italic;
-}
-
-.ant-btn-primary {
-  color: #fff;
-  background-color: #FF7A34;
-  border-color: #FF7A34;
-  border-radius: 20px;
-  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
-  box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
-  padding: 14px 64px 30px 68px;
-  margin-top: 30px;
-}
-
-small {
-  display: block;
-  margin: 2px;
-}
-
-.ant-input {
-  box-sizing: border-box;
-  margin: 0;
-  font-variant: tabular-nums;
-  list-style: none;
-  font-feature-settings: 'tnum';
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  // height: 32px;
-  padding: 4px 11px;
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 14px;
-  line-height: 1.5;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #d9d9d9;
-  border-radius: 0px;
-  transition: all 0.3s;
-  margin-bottom: 20px;
-}
-
-.m-t30 {
-  margin-top: 30px;
-}
-
-.p-l-1p {
-  padding-left: 1%;
-}
-
-.p-r-1p {
-  padding-right: 1%;
-}
-
-.files-format{
-  font-size: 12px;
-  color: black!important;
-  font-weight: 500;
-  line-height: 0.5;
-}
-
-.ant-upload.ant-upload-select {
-  display: none;
-}
-
-.custom-upload-btn {
-
-  display: block;
-  color:#FF7A34;
-
-  .ant-upload.ant-upload-select {
-    display: block;
-    position: relative;
+  template {
+    background-color: #F8F8F8;
   }
 
-  button {
-    width: 100%;
+  .contact-us {
+    margin: 20px;
+    margin-top: 0px;
+    background-color: #F8F8F8;
   }
 
-  .place-holder {
-    float: left;
+  .contact-main {
+    background-color: #fff;
+    margin: 100px;
   }
 
-  .upload-icon {
+  .input-part {
+    padding: 80px;
+  }
+
+  .line-color {
+    border-color: #FF7A34;
+    border-top: none;
+  }
+
+  hr {
+    border-color: #d9d9d9;
+    border-top: none;
+  }
+
+  .move-right {
     float: right;
   }
-}
+
+  textarea.ant-input {
+    resize: none;
+  }
+
+  .ant-input:placeholder-shown {
+    font-style: italic;
+  }
+
+  .ant-btn-primary {
+    color: #fff;
+    background-color: #FF7A34;
+    border-color: #FF7A34;
+    border-radius: 20px;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+    padding: 14px 64px 30px 68px;
+    margin-top: 30px;
+  }
+
+  small {
+    display: block;
+    margin: 2px;
+  }
+
+  .ant-input {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    // height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 0px;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+  }
+
+  .m-t30 {
+    margin-top: 30px;
+  }
+
+  .p-l-1p {
+    padding-left: 1%;
+  }
+
+  .p-r-1p {
+    padding-right: 1%;
+  }
+
+  .files-format{
+    font-size: 12px;
+    color: black!important;
+    font-weight: 500;
+    line-height: 0.5;
+  }
+
+  .ant-upload.ant-upload-select {
+    display: none;
+  }
+
+  .custom-upload-btn {
+
+    display: block;
+
+
+    .ant-upload.ant-upload-select {
+      display: block;
+      position: relative;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .place-holder {
+      float: left;
+    }
+
+    .upload-icon {
+      float: right;
+    }
+  }
+
+
+
 </style>
 <style>
 .ant-upload.ant-upload-select {
-  display: block !important;
-}
+    display: block !important;
+  }
+
 </style>

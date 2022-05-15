@@ -5,14 +5,17 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import LottieAnimation from 'lottie-web-vue'
 
-
 // To be Reviewed
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-library.add(fas);
+import VueCompositionAPI from '@vue/composition-api'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+    // optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+Vue.use(VueCompositionAPI);
 import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(far);
 
@@ -23,9 +26,6 @@ Vue.component('font-awesome-icon', fas)
 Vue.component('font-awesome-icon', far)
 
 // End
-
-
-
 
 Vue.config.productionTip = false
 

@@ -2,18 +2,22 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '@/views/Home.vue';
 import Builder from "@/views/Builder";
-import Blog from "@/views/Blog";
-import Contact from "@/views/Contact.vue";
+
 
 // To be Reviewed
+import Blog from "@/views/Blog";
+import Contact from "@/views/Contact.vue";
+import Search from "@/views/SearchPage.vue";
+import Category from "@/views/Category.vue";
+import Filter from "@/views/Filter.vue";
+
 import Account from "@/views/Account.vue";
 import Checkout from "@/views/CheckFlow.vue";
 import ContactDetails from '../views/ContactDetails.vue';
 import ThankYouPage from '../views/ThankYouPage.vue';
 import BlogContent from '../views/BlogContent.vue';
 
-
-
+// End
 
 Vue.use(VueRouter)
 
@@ -65,6 +69,21 @@ const routes = [
     path:'/journal-content',
     name:BlogContent,
     component:BlogContent
+  },
+  {
+    path: '/category',
+    name: 'Category',
+    component: Category
+  },
+  {
+    path: '/filter',
+    name: 'Filter',
+    component: Filter
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
   }
   // {
   //   path: '/about',

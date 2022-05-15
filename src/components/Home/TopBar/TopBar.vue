@@ -9,7 +9,7 @@
       </nav>
       <nav class="navListMob">
         <a-dropdown :trigger="['click']">
-          <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
+          <a class="ant-dropdown-link" @click="e => e.preventDefault()">
             <a-icon type="menu" />
           </a>
           <a-menu slot="overlay">
@@ -24,25 +24,29 @@
       </nav>
       <section class="form mxAuto dFlex" v-if="scrollPosition > 303">
         <header class="selectText">
-          <p>Category :</p>
+          <p>
+            Category :
+          </p>
         </header>
         <section class="inputSelection">
           <a-input-group compact>
             <a-select style="width: 25%" default-value="all">
-              <a-select-option value="all"> All </a-select-option>
-              <a-select-option value="handles"> Handles </a-select-option>
-              <a-select-option value="hinges"> Hinges </a-select-option>
+              <a-select-option value="all">
+                All
+              </a-select-option>
+              <a-select-option value="handles">
+                Handles
+              </a-select-option>
+              <a-select-option value="hinges">
+                Hinges
+              </a-select-option>
             </a-select>
-            <a-input-search
-              style="width: 75%"
-              placeholder="Search Categories"
-              @search="onSearch"
-            />
+            <a-input-search style="width: 75%" placeholder="Search Categories" @search="onSearch"/>
           </a-input-group>
         </section>
       </section>
       <section class="topBarActions dFlex alignItemsCenter">
-        
+
         <template>
           <a-dropdown :trigger="['click']">
             <a class="ant-dropdown-link" @click.prevent>
@@ -123,7 +127,7 @@ export default {
       }
     },
   },
-  
+
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
   },
