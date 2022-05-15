@@ -136,11 +136,10 @@
     </section>
 </template>
 <script type ="ts">
-import Footer from "@/components/Global/Footer.vue";
-import TopBar from "@/components/Home/TopBar/TopBar";
+import Footer from "../../src/components/Global/Footer.vue";
+import TopBar from "../../src/components/Home/TopBar/TopBar";
 import LeftOutlined from '@ant-design/icons';
 import RightOutlined from '@ant-design/icons';
-import {ref } from 'vue';
 
 export default {
     name:'MyAccount',
