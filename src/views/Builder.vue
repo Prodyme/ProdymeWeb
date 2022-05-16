@@ -331,6 +331,10 @@
               <a-pagination simple :default-current="2" :total="37" />
             </footer>
           </article>
+          <!-- visualization -->
+          <aside class="principleCard">
+            <Visualization></Visualization>
+          </aside>
           <!-- Pivot Card -->
           <section class="principleCard">
             <header class="princeHeader dFlex justifyBetween">
@@ -563,9 +567,11 @@
 import TopBar from "@/components/Global/TopBar";
 import Footer from "@/components/Global/Footer";
 import Card from "@/components/Global/Card";
+import Visualization from "@/components/Builder/Visualization";
 export default {
   name: "Builder",
   components: {
+    Visualization,
     TopBar,
     Footer,
     Card
