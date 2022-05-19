@@ -24,7 +24,7 @@
                       <p>New user: </p>
                       <a href="#" v-on:click="signup()">Create Account</a>
                     </div>
-                </div>
+              </div>
       </a-menu-item>
       <a-menu-item key="1">
         <a href="http://www.taobao.com/">2nd menu item</a>

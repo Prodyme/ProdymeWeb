@@ -1,5 +1,10 @@
 <template>
-    <section class="nav">
+<!-- :style="{width: sidebarWidth} -->
+ <!-- v-on:click="toggleSidebar" :class="{'rotate-180' : collapsed}" -->
+    <section class="nav" :style= "{width: sidebarWidth}">
+        <span class="collapse-icon" v-on:click="toggleSideBar"><a-icon type="left"/></span>
+        <p v-if="collapsed">this is collapsed</p>
+        <p v-else>This is not collapsed</p>
         <div class="nav-heading">
             <h2>Hey, let us know your requirements and we will get you the best products!</h2>
         </div>
@@ -120,8 +125,38 @@
 </template>
 
 <script>
+// import {collapsed, toggleSidebar, sidebarWidth} from './State'
+// import { ref, computed }  from 'Vue'
+
 export default({
     name: 'Navbar',
+    data(){
+        return{
+            collapsed : false,
+            sidebarWidthFixed : 20,
+            sidebarWidthCollapsed : 10,
+        }
+    },
+    computed: {
+        sidebarWidth(){
+            if(this.collapsed)
+                return this.sidebarWidthCollapsed;
+            
+            else
+                return this.sidebarWidthFixed;
+        },
+    },
+    methods: {
+        toggleSideBar(){
+            this.collapsed = !this.collapsed;
+        }, 
+        // sidebarWidth = computed(() => `${collapsed.value ? sidebarWidthCollapsed : sidebar_Width}rem`) 
+
+    } ,   
+    // props: {},
+    // setup(){
+    //     return {collapsed, toggleSidebar, sidebarWidth}
+    // }
 })
 </script>
 
@@ -131,6 +166,24 @@ export default({
         width: 20rem;
         height: auto;
         padding: 3rem;
+        transition: 0.3s ease;
+    }
+    .collapse-icon{
+        color: white;
+        background-color: #2A2A2A;
+        /* border: 1px solid red; */
+        position: absolute;
+        left: 103%;
+        top: 12rem;
+        font-size: 0.8rem;
+        z-index: 1;
+        padding: 10px 5px;
+        cursor: pointer;
+        transition: 0.2s linear;
+    }
+    .rotate-180{
+        transform: rotate(180deg);
+        transition: 0.2s linear;
     }
     .nav-heading{
         padding-bottom: 1rem;

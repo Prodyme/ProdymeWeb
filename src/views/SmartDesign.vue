@@ -55,6 +55,7 @@
             <router-link to="/Basket"><button class="btn proceed">Proceed</button></router-link>
         </div>
       </a-col>
+      <SaveCard v-if="visible"></SaveCard>
       <a-col :span="12" class="col2">
        <div class="header">
            <a-dropdown :trigger="['click']">
@@ -70,7 +71,8 @@
             <div class="sub-header">
                 <a href="" class="consult">Consult A Pro?</a>
                 <a-icon type="share-alt" class="icons"/>
-                <a-icon type="save" class="icons"/>
+                <a-icon type="save" class="icons" v-on:click="visible = !visible"/>
+                
             </div>
             
        </div>
@@ -249,6 +251,22 @@
     </section>
 </template>
 
+<script>
+import SaveCard from "@/views/SaveCard.vue"
+// import SaveCard from './saveCard.vue'
+export default {
+    name: 'SmartDesign',
+    data(){
+        return{
+            visible: false,
+        }
+    },
+    components: {
+        SaveCard
+    }
+}
+</script>
+
 <style scoped>
     .designMain{
         /* border: 1px solid palevioletred; */
@@ -312,6 +330,7 @@
         font-size: 0.8rem;
         text-decoration: underline;
         margin-bottom: 0.4rem;
+        cursor: pointer;
     }
     .btn{
         width: 7rem;
@@ -335,12 +354,6 @@
         background-color: #2A2A2A;
         color: white;
     }
-    .proceed:hover{
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-    }
-
     .col2{
         padding: 5px;
     }

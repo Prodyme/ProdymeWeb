@@ -11,6 +11,8 @@ import Wishlist from "@/views/Wishlist.vue";
 import Messages from "@/views/Messages.vue";
 import SmartBuilder from "@/views/SmartBuilder.vue"
 import SmartBuilderBasket from "@/views/SmartBuilderBasket.vue"
+import Test from "@/views/Test.vue"
+import AdminOrders from "@/views/AdminOrders.vue"
 
 Vue.use(VueRouter)
 
@@ -72,6 +74,16 @@ const routes = [
     path: '/Basket',
     name: 'SmartBuilderBasket',
     component: SmartBuilderBasket
+  },
+  {
+    path: '/Test',
+    name: 'Test',
+    component: Test
+  },
+  {
+    path: '/AdminOrders',
+    name: 'AdminOrders',
+    component: AdminOrders
   },
   // {
   //   path: '/about',
