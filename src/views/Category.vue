@@ -84,23 +84,23 @@
                 </div>
         <div style="background-color:#F8F8F8; margin: 0 40px 30px 40px;">
             <h2 class="product-heading">Category of Products</h2>
-            <div class="mt-60 d-flex content-justify">
-                <div>
+            <a-row :gutter="16" class="card-p20">
+                <a-col :span="4">
+                <AddToCart />
+                </a-col>
+                <a-col :span="4">
                     <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-            </div>
+                </a-col>
+                <a-col :span="4">
+                  <AddToCart />
+                </a-col>
+                <a-col :span="4">
+                   <AddToCart />
+                </a-col>
+                <a-col :span="4">
+                   <AddToCart />
+                </a-col>
+            </a-row>
         </div>
         <!--------main-carousel----------->
         <div>
@@ -113,43 +113,43 @@
         <!-----------category of products------->
         <div style="background-color:#F8F8F8; margin: 0px 40px">
             <h2 class="product-heading">Category of Products</h2>
-            <div class="mt-60 d-flex content-justify">
-                <div>
+             <a-row :gutter="16" class="card-p20">
+                <a-col :span="4">
+                <AddToCart />
+                </a-col>
+                <a-col :span="4">
                     <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-            </div>
+                </a-col>
+                <a-col :span="4">
+                  <AddToCart />
+                </a-col>
+                <a-col :span="4">
+                   <AddToCart />
+                </a-col>
+                <a-col :span="4">
+                   <AddToCart />
+                </a-col>
+            </a-row>
         </div>
         <!-----------2nd part cop------------->
         <div style="background-color:#F8F8F8; padding: 40px;">
-            <div class="mt-60 d-flex content-justify">
-                <div>
+             <a-row :gutter="16" class="card-p20">
+                <a-col :span="4">
+                <AddToCart />
+                </a-col>
+                <a-col :span="4">
                     <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-                <div>
-                    <AddToCart />
-                </div>
-            </div>
+                </a-col>
+                <a-col :span="4">
+                  <AddToCart />
+                </a-col>
+                <a-col :span="4">
+                   <AddToCart />
+                </a-col>
+                <a-col :span="4">
+                   <AddToCart />
+                </a-col>
+            </a-row>
         </div>
         <Footer />
     </section>
@@ -220,6 +220,7 @@
     .product-heading {
         display: flex;
         align-items: center;
+        margin-top: 50px;
     }
 
     .product-heading::after {

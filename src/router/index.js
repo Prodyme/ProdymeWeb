@@ -6,6 +6,10 @@ import Contact from "@/views/Contact.vue";
 import Category from "@/views/Category.vue";
 import Filter from "@/views/Filter.vue";
 import Search from "@/views/SearchPage.vue";
+import Service from "@/views/ServiceHire.vue";
+import Carpenter from "@/views/ServiceHire2.vue";
+import Hire from "@/views/HireProvider.vue";
+import Admin from "@/views/ProductAdmin.vue";
 
 Vue.use(VueRouter)
 
@@ -40,6 +44,26 @@ const routes = [
     name: 'Search',
     component: Search
   },
+  {
+    path: '/service',
+    name: 'Service',
+    component: Service
+  },
+  {
+    path: '/carpenter',
+    name: 'Carpenter',
+    component: Carpenter
+  },
+  {
+    path: '/hire',
+    name: 'hire',
+    component: Hire
+  },
+  {
+    path: '/padmin',
+    name: 'ProductAdmin',
+    component: Admin,
+  }
   // {
   //   path: '/about',
   //   name: 'About',

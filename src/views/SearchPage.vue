@@ -94,53 +94,52 @@
                     <h2 class="product-heading">Category of Products</h2>
                 </div>
                 <!-----products------>
-                <div class="mt-30 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
+                <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
                 <SearchCarousel style="margin-top:40px" />
                 <SearchPageStarCarousel />
                 <h2 class="product-heading" style="padding:20px;">Category of Products</h2>
-                <div class="mt-60 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
-                <div class="mt-60 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
+                <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
+               <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
             </a-col>
-
         </a-row>
         <Footer />
     </section>
@@ -230,7 +229,7 @@
     .filter-category-part {
         background-color: #2A2A2A;
         // max-height: 100%;
-        height: 2250px;
+        height: 2270px;
     }
 
     .filter-option {

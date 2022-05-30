@@ -13,7 +13,6 @@
                     <br>
                     <Accordian />
                 </div>
-
             </a-col>
 
             <a-col :span="20" class="products-part">
@@ -50,60 +49,75 @@
                         <button class="pagination-button">
                             <right-outlined /></button>
                     </span>
-
                 </article>
 
 
 
-                <div class="mt-60 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
+                <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
+                  
 
 
 
 
                 <!---------------2nd row------------------>
-                <div class="mt-60 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
+               <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
                 <!----------3rd row-------->
-                <div class="mt-60 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
+              <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
                 <!-------------4th row----------->
+              <a-row type="flex" justify="space-around" style="padding:10px 20px;" >
+                     <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col >
+                         <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                        <a-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" style="padding:10px 20px;">
+                           <AddToCart />
+                     </a-col>
+                </a-row>
+                <!-------5th row------------->
                 <div class="mt-60 d-flex content-justify">
                     <div>
                         <AddToCart />
@@ -118,23 +132,8 @@
                         <AddToCart />
                     </div>
                 </div>
-                <!------------5th row------------->
-                <div class="mt-60 d-flex content-justify">
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                    <div>
-                        <AddToCart />
-                    </div>
-                </div>
-                <span style="float:right;margin-top:30px;">
 
+                <span style="float:right;margin-top:30px;">
                     <!-- <a-pagination :current="current" simple :total="50" /> -->
                     <button class="pagination-button">
                         <left-outlined /></button>
@@ -143,7 +142,6 @@
                         <right-outlined /></button>
                 </span>
             </a-col>
-
         </a-row>
         <Footer />
     </section>
@@ -214,7 +212,7 @@
     .filter-category-part {
         background-color: #2A2A2A;
         // max-height: 100%;
-        height: 2350px;
+        height: 2300px;
     }
 
     .banner-card {
@@ -227,14 +225,13 @@
         max-height: 50vh;
         max-width: 100%;
         // /* width: 100vw; */
-        opacity: 0.3; 
-      
+        opacity: 0.3;  
     }
 
   
     .products-part {
         background-color: #F8F8F8;
-        padding: 20px;
+        // padding: 20px;
     }
 
    
@@ -263,6 +260,7 @@
     }
 
     .features {
+        margin-left:10px;
         a {
             color: #2A2A2A;
         }
