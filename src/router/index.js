@@ -29,6 +29,7 @@ import Checkout from "@/views/CheckFlow.vue";
 import ContactDetails from '../views/ContactDetails.vue';
 import ThankYouPage from '../views/ThankYouPage.vue';
 import BlogContent from '../views/BlogContent.vue';
+import ButterCMSView from '../views/ButterCMS-view.vue';
 
 // End
 
@@ -147,6 +148,11 @@ const routes = [
     path: '/padmin',
     name: 'ProductAdmin',
     component: Admin,
+  },
+  {
+    path:'/butter-cms',
+    name: ButterCMSView,
+    component: ButterCMSView
   }
   // {
   //   path: '/about',

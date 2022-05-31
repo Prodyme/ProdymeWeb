@@ -2,7 +2,7 @@
   <section>
     <a-row>
     <a-col :span="4" class="cleft">
-      <Tree />
+      <CardColumn />
     </a-col>
     <a-col :span="20" class="cright">
       <BlogContentComponent />
@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import Tree from "../../../ProdymeWeb/src/components/Global/Tree.vue"
 import BlogContentComponent from "../../../ProdymeWeb/src/components/Global/BlogContentComponent.vue"
+import CardColumn from "@/components/Global/CardColumn";
 export default {
   name:'JournalContent',
   components:{
-    Tree,
+    CardColumn,
     BlogContentComponent
   }
 
@@ -27,11 +27,11 @@ export default {
 <style>
 .cleft {
   background-color: #2a2a2a;
-  height:150rem;
+  height:180rem;
 }
 .cright {
   background-color: #F8F8F8;
-  height: 150rem;
+  height: 10rem;
 }
 
 </style>
