@@ -1,5 +1,4 @@
 <template>
-
   <a-collapse accordion expandIconPosition="right" class="filter-category" >
     <template #expandIcon="{ isActive }">
       <up-outlined :rotate="isActive ? 0 : 180"  />
@@ -25,7 +24,6 @@
         </a-checkbox>
     </a-collapse-panel> -->
   </a-collapse>
-
 </template>
 <script>
 import { UpOutlined } from '@ant-design/icons-vue';

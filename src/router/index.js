@@ -8,9 +8,14 @@ import Builder from "@/views/Builder";
 // To be Reviewed
 import Blog from "@/views/Blog";
 import Contact from "@/views/Contact.vue";
-import Search from "@/views/SearchPage.vue";
 import Category from "@/views/Category.vue";
 import Filter from "@/views/Filter.vue";
+
+import Search from "@/views/SearchPage.vue";
+import Service from "@/views/ServiceHire.vue";
+import Carpenter from "@/views/ServiceHire2.vue";
+import Hire from "@/views/HireProvider.vue";
+import Admin from "@/views/ProductAdmin.vue";
 
 import Orders from "@/views/Orders.vue";
 import Designs from "@/views/Design.vue";
@@ -122,6 +127,26 @@ const routes = [
     path: '/Basket',
     name: 'SmartBuilderBasket',
     component: SmartBuilderBasket
+  },
+  {
+    path: '/service',
+    name: 'Service',
+    component: Service
+  },
+  {
+    path: '/carpenter',
+    name: 'Carpenter',
+    component: Carpenter
+  },
+  {
+    path: '/hire',
+    name: 'hire',
+    component: Hire
+  },
+  {
+    path: '/padmin',
+    name: 'ProductAdmin',
+    component: Admin,
   }
   // {
   //   path: '/about',

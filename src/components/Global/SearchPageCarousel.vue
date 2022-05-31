@@ -151,48 +151,48 @@ export default ({
 </script>
 
 <style lang="scss" scoped>
-//   .box-rupee {
-//         display: inline;
-//         font-size: 28px;
-//     }
+  .box-rupee {
+        display: inline;
+        font-size: 28px;
+    }
 
-//     .product-checkbox {
-//         margin-top: 10px;
-//     }
+    .product-checkbox {
+        margin-top: 10px;
+    }
 
-//     .fa-star {
-//         color: #FF7A34;
-//         margin: 3px;
-//     }
+    .fa-star {
+        color: #FF7A34;
+        margin: 3px;
+    }
 
-//     .empty-star {
-//         color: #BCBCBC;
-//     }
+    .empty-star {
+        color: #BCBCBC;
+    }
 
-//     .fa-heart {
-//         color: #FF7A34;
-//         float: right;
-//         position: relative;
-//         left: 20px;
-//         bottom:20px;
-//     }
+    .fa-heart {
+        color: #FF7A34;
+        float: right;
+        position: relative;
+        left: 20px;
+        bottom:20px;
+    }
     
 
-//     .product-per-box {
-//         font-size: 106%;
-//         font-weight: bold;
-//     }
+    .product-per-box {
+        font-size: 106%;
+        font-weight: bold;
+    }
 
-//     h3,
-//     h2 {
-//         font-weight: 700
-//     }
-//      .product-hr {
+    h3,
+    h2 {
+        font-weight: 700
+    }
+     .product-hr {
 
-//         /* background-color: gray; */
-//         border-bottom: none;
-//         border-top: 1px solid #D9D9D9;
-//     }
+        /* background-color: gray; */
+        border-bottom: none;
+        border-top: 1px solid #D9D9D9;
+    }
 .search-carousel {
             padding: 20px;
                box-shadow: 3px 3px 20px #00000029;

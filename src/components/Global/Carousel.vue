@@ -1,221 +1,292 @@
 <template>
   <div class="product-main-carousel" style="margin:0px 40px 0px 40px">
-            <h2>Products on Sale!</h2>
+    <h2>Products on Sale!</h2>
 
-            <VueSlickCarousel v-bind="settings" :dots="false" :key="$route.fullPath">
+    <VueSlickCarousel v-bind="settings" :dots="false" :key="$route.fullPath">
 
 
-                <a-card :bordered="false">
-                    <center>
-                        <img src="../../assets/mountains.jpg" width="100px">
-                    </center>
-                    <div class="description">
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
-                    </div>
-                    <div class="details">
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                    <hr class="product-hr">
-                    <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                    <a-checkbox @change="onChange" class="product-checkbox">
-                        Add to Smart Builder
-                    </a-checkbox>
-                    </div>
-                </a-card>
-
-                <a-card :bordered="false">
-                    <center>
-                        <img src="../../assets/mountains.jpg" width="100px">
-                    </center>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                    <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                    <hr class="product-hr">
-                    <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                    <a-checkbox @change="onChange" class="product-checkbox">
-                        Add to Smart Builder
-                    </a-checkbox>
-                </a-card>
-                <div>
-                    <a-card :bordered="false">
-                        <center>
-                            <img src="../../assets/mountains.jpg" width="100px">
-                        </center>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                        <hr class="product-hr">
-                        <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                        <a-checkbox @change="onChange" class="product-checkbox">
-                            Add to Smart Builder
-                        </a-checkbox>
-                    </a-card>
-                </div>
-                <div>
-                    <a-card :bordered="false">
-                        <center>
-                            <img src="../../assets/mountains.jpg" width="100px">
-                        </center>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                        <hr class="product-hr">
-                        <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                        <a-checkbox @change="onChange" class="product-checkbox">
-                            Add to Smart Builder
-                        </a-checkbox>
-                    </a-card>
-                </div>
-                <div>
-                    <a-card :bordered="false">
-                        <center>
-                            <img src="../../assets/mountains.jpg" width="100px">
-                        </center>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                        <hr class="product-hr">
-                        <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                        <a-checkbox @change="onChange" class="product-checkbox">
-                            Add to Smart Builder
-                        </a-checkbox>
-                    </a-card>
-                </div>
-                <div>
-                    <a-card :bordered="false">
-                        <center>
-                            <img src="../../assets/mountains.jpg" width="100px">
-                        </center>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" />
-                        <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                        <hr class="product-hr">
-                        <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                        <a-checkbox @change="onChange" class="product-checkbox">
-                            Add to Smart Builder
-                        </a-checkbox>
-                    </a-card>
-                </div>
-                <div>
-                    <a-card :bordered="false">
-                        <center>
-                            <img src="../../assets/mountains.jpg" width="100px">
-                        </center>
-                        <div class="product-details-left">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</h4>
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                            <font-awesome-icon icon="fa-solid fa-star" class="empty-star" />
-                            <hr class="product-hr">
-                            <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
-                            <a-checkbox @change="onChange" class="product-checkbox">
-                                Add to Smart Builder
-                            </a-checkbox>
-                        </div>
-                    </a-card>
-                </div>
-            </VueSlickCarousel>
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
         </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+
+
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
+        </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
+        </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
+        </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
+        </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
+        </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+
+      <a-card :bordered="false">
+        <center>
+          <img src="../../assets/mountains.jpg" width="100px">
+        </center>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit..</h4>
+        <aside class="princeReview">
+          <a-rate :default-value="4" allow-half />
+        </aside>
+        <hr class="product-hr">
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
+        <br>
+        <div class="quantity">
+          <button @click="decrement(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-minus" /></button>
+          <input :value="number" class="input-box">
+          <button @click="increment(number)" class="increase-decrease">
+            <font-awesome-icon icon="fa-solid fa-plus" /></button>
+        </div>
+        <a-checkbox @change="onChange" class="add-to-cart">
+          Add to cart
+        </a-checkbox>
+      </a-card>
+    </VueSlickCarousel>
+  </div>
 </template>
 
 <script>
-
- import VueSlickCarousel from 'vue-slick-carousel'
-    import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-    // optional style for arrows & dots
-    import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default ({
-   name: 'MyCarousel',
-        components: {
-            VueSlickCarousel,
+  name: 'MyCarousel',
+  components: {
+    VueSlickCarousel,
 
 
-        },
-         data() {
-            return {
-                settings: {
-                    "arrows": true,
-                    "focusOnSelect": true,
-                    "infinite": true,
-                    "speed": 500,
-                    "slidesToShow": 5,
-                    "slidesToScroll": 5,
-                    "touchThreshold": 5
-                },
-            }
-         }
+  },
+  data() {
+    return {
+      settings: {
+        "arrows": true,
+        "focusOnSelect": true,
+        "infinite": true,
+        "speed": 500,
+        "slidesToShow": 5,
+        "slidesToScroll": 5,
+        "touchThreshold": 5
+      },
+      number: 1,
+    }
+  },
+  methods: {
+    increment() {
+      this.number++;
+    },
+    decrement() {
+      if (this.number <= 0) {
+        this.number = 0;
+      } else {
+        this.number--;
+      }
+    }
+  },
+
 
 
 });
-
 </script>
 
 <style lang="scss" scoped>
-//   .box-rupee {
-//         display: inline;
-//         font-size: 28px;
-//     }
+.mt-10 {
+  margin-top: 10px;
+}
 
-//     .product-checkbox {
-//         margin-top: 10px;
-//     }
+.fs-106 {
+  font-size: 106%;
+}
 
-//     .fa-star {
-//         color: #FF7A34;
-//         margin: 3px;
-//     }
+.fw-bold {
+  font-weight: bold;
+}
 
-//     .empty-star {
-//         color: #BCBCBC;
-//     }
+.display-inline {
+  display: inline;
+}
 
-//     .fa-heart {
-//         color: #FF7A34;
-//         float: right;
-//         position: relative;
-//         left: 20px;
-//         bottom:20px;
-//     }
+.fs-28 {
+  font-size: 28px;
+}
 
+.add-to-cart {
+  float: right;
+  position: relative;
+  top: 10px;
+  left: 17px;
+}
 
-//     .product-per-box {
-//         font-size: 106%;
-//         font-weight: bold;
-//     }
+.product-hr {
 
-//     h3,
-//     h2 {
-//         font-weight: 700
-//     }
-//      .product-hr {
+  /* background-color: gray; */
+  border-bottom: none;
+  border-top: 1px solid #D9D9D9;
+}
 
-//         /* background-color: gray; */
-//         border-bottom: none;
-//         border-top: 1px solid #D9D9D9;
-//     }
-// .product-main-carousel {
-//             padding: 40px;
-//                box-shadow: 3px 3px 20px #00000029;
-//             background-color: white;
-//         }
+.increase-decrease {
+  border: none;
+  color: #FF7A34;
+}
+
+.input-box {
+  width: 12%;
+  text-align: center;
+  border: none;
+}
+
+.quantity {
+  display: inline !important;
+  position: relative;
+  top: 8px;
+  right: 11px;
+}
+
+.wishlist {
+  font-size: 30px;
+  color: #FF7A34;
+  font-weight: bolder;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  bottom: 16px;
+  left: 8px;
+}
+
+.princeReview {
+  .ant-rate {
+    font-size: 16px;
+  }
+}
+</style>
+<style>
+.slick-list div,
+.slick-slide div {
+  text-align: left !important;
+}
 </style>

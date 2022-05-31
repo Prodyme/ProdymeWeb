@@ -9,7 +9,7 @@
             <a-rate :default-value="4" allow-half />
         </aside>
         <hr class="product-hr">
-        <h2 class="box-rupee">&#8377;21.58</h2><small class="product-per-box"> per box</small>
+        <h2 class="display-inline fs-28">&#8377;21.58</h2><small class="fs-106 fw-bold"> per box</small>
         <br>
         <div class="quantity">
             <button @click="decrement(number)" class="increase-decrease">
@@ -47,15 +47,43 @@
 </script>
 
 <style lang="scss" scoped>
+    .mt-10 {
+        margin-top: 10px;
+    }
+
+    .fs-106 {
+        font-size: 106%;
+    }
+
+    .fw-bold {
+        font-weight: bold;
+    }
+
+    .display-inline {
+        display: inline;
+    }
+
+    .fs-28 {
+        font-size: 28px;
+    }
+
+    .product-hr {
+
+        /* background-color: gray; */
+        border-bottom: none;
+        border-top: 1px solid #D9D9D9;
+    }
+
     .add-to-cart {
         float: right;
-        position: relative;
-        top: 10px;
-        left: 17px;
+        margin-top: 10px;
+        // position: relative;
+        // top: 10px;
+        // left: 17px;
     }
 
     .category-card:hover {
-        background-color: white !important;
+        background-color: #ffffff !important;
         box-shadow: 3px 3px 20px #00000029;
 
         .fa-heart {
@@ -67,7 +95,8 @@
             background-color: white;
 
         }
-        .input-box{
+
+        .input-box {
             background-color: #f4f4f4;
         }
     }
@@ -97,9 +126,9 @@
         font-weight: bolder;
         cursor: pointer;
         float: right;
-        position: relative;
-        bottom: 16px;
-        left: 8px;
+        // position: relative;
+        // bottom: 16px;
+        // left: 8px;
     }
 
     .princeReview {
