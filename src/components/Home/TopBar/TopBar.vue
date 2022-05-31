@@ -45,8 +45,34 @@
           </a-input-group>
         </section>
       </section>
-      <section class="topBarActions dFlex alignItemsCenter">
-
+      <section class="topBarActions dFlex alignItemsCenter positionRelative">
+        <button v-on:click="isAuthHidden = !isAuthHidden">Login / Sign Up</button>
+        <transition name="auth-fade">
+          <aside class="positionAbsolute authWidget">
+            <a-card :bordered="false" v-if="isAuthHidden">
+              <section class="sign-in">
+                <h4 class="heading">Sign In</h4>
+                <aside class="fields">
+                  <section class="email">
+                    <label>Email/Mobile Number: </label>
+                    <input type="email" placeholder="Email/Mobile Number" v-model="email"/>
+                  </section>
+                  <section class="password">
+                    <label>Password: </label>
+                    <input type="password" placeholder="Password" v-model="password"/>
+                  </section>
+                </aside>
+                <p style="color: #ff7a34;">Forget Password?</p>
+                <a-button class="btn" v-on:click="login()">Login</a-button>
+                <footer class="new-user">
+                  <p>New user: </p>
+                  <a href="#" v-on:click="signup()">Create Account</a>
+                </footer>
+              </section>
+            </a-card>
+          </aside>
+        </transition>
+        <!--
         <template>
           <a-dropdown :trigger="['click']">
             <a class="ant-dropdown-link" @click.prevent>
@@ -70,7 +96,6 @@
                   </div>
                    <p style="color: #ff7a34;">Forget Password?</p>
                     <a-button class="btn" v-on:click="login()">Login</a-button>
-                    <!-- <a-alert message="Successful Login" type="success" show-icon /> -->
                     <div class="new-user">
                       <p>New user: </p>
                       <a href="#" v-on:click="signup()">Create Account</a>
@@ -81,6 +106,7 @@
             </template>
           </a-dropdown>
         </template>
+        -->
       </section>
     </section>
   </header>
@@ -95,10 +121,11 @@ export default {
   name: "TopBar",
   data: function () {
     return {
+      isAuthHidden: false,
       scrollPosition: null,
-      email: " ",
-      password: " ",
-      username: " ",
+      email: "",
+      password: "",
+      username: "",
     };
   },
   methods: {
@@ -112,7 +139,7 @@ export default {
       let result = await axios.get(`https://jsonplaceholder.typicode.com/users?email=${this.email}&username=${this.password}`)
       console.warn(result);
 
-      if(result.status == 200 && result.data.length>0){
+      if(result.status === 200 && result.data.length>0){
         alert("successful login");
         // let dropDown = document.getElementsByClassName("ant-dropdown-link");
         // let accountBtn = document.createElement("button");
@@ -133,6 +160,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@mixin fade($fadeEl, $fadeTime: null) {
+  @if ($fadeTime) {
+    .#{$fadeEl}-fade-enter-active {
+      transition: opacity $fadeTime;
+    }
+    .#{$fadeEl}-fade-leave-active {
+      transition: opacity $fadeTime;
+    }
+  } @else {
+    .#{$fadeEl}-fade-enter-active {
+      transition: opacity 350ms;
+    }
+    .#{$fadeEl}-fade-leave-active {
+      transition: opacity 250ms;
+    }
+  }
+  .#{$fadeEl}-fade-enter,
+  .#{$fadeEl}-fade-leave-to {
+    opacity: 0;
+  }
+}
+@include fade(auth);
 .dFlex {
   display: flex;
 }
@@ -141,6 +190,12 @@ export default {
 }
 .justifyBetween {
   justify-content: space-between;
+}
+.positionRelative {
+  position: relative;
+}
+.positionAbsolute {
+  position: absolute;
 }
 .topBar {
   z-index: 20;
@@ -175,6 +230,11 @@ export default {
   font-size: 14px;
   position: relative;
   top: 8px;
+}
+.authWidget {
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .form {
   width: 916px;
@@ -246,21 +306,17 @@ export default {
   }
 }
 
-.sign-in{
-  width: 15rem;
-  overflow: hidden;
+.sign-in {
+  width: 220px;
   padding: 10px;
 }
 
-.heading{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.heading {
   color: #ff7a34;
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
 }
-
 .fields{
   margin-bottom: 10px;
 }

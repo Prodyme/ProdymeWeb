@@ -6,7 +6,7 @@
 <!--    </div>-->
 <!--    <router-view/>-->
 <!--  </div>-->
-  <section>
+  <section class="app">
     <router-view/>
   </section>
 </template>
@@ -19,12 +19,11 @@ export default {
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-html, body {
-  font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+html, body, .app {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.2px;
