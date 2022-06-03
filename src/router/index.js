@@ -13,6 +13,7 @@ import SmartBuilder from "@/views/SmartBuilder.vue"
 import SmartBuilderBasket from "@/views/SmartBuilderBasket.vue"
 import Test from "@/views/Test.vue"
 import AdminOrders from "@/views/AdminOrders.vue"
+import ProductDetailsAdmin from "@/views/ProductDetailsAdmin.vue"
 
 Vue.use(VueRouter)
 
@@ -84,6 +85,11 @@ const routes = [
     path: '/AdminOrders',
     name: 'AdminOrders',
     component: AdminOrders
+  },
+  {
+    path: '/ProductDetailsAdmin',
+    name: 'ProductDetailsAdmin',
+    component: ProductDetailsAdmin
   },
   // {
   //   path: '/about',
