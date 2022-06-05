@@ -22,7 +22,7 @@
           </a-menu>
         </a-dropdown>
       </nav>
-      <section class="form mxAuto dFlex" v-if="scrollPosition > 303">
+      <section class="form whiteBg mxAuto dFlex" v-if="scrollPosition > 303">
         <header class="selectText">
           <p>
             Category :
@@ -48,65 +48,62 @@
       <section class="topBarActions dFlex alignItemsCenter positionRelative">
         <button v-on:click="isAuthHidden = !isAuthHidden">Login / Sign Up</button>
         <transition name="auth-fade">
-          <aside class="positionAbsolute authWidget">
-            <a-card :bordered="false" v-if="isAuthHidden">
-              <section class="sign-in">
-                <h4 class="heading">Sign In</h4>
-                <aside class="fields">
-                  <section class="email">
-                    <label>Email/Mobile Number: </label>
-                    <input type="email" placeholder="Email/Mobile Number" v-model="email"/>
-                  </section>
-                  <section class="password">
-                    <label>Password: </label>
-                    <input type="password" placeholder="Password" v-model="password"/>
-                  </section>
-                </aside>
-                <p style="color: #ff7a34;">Forget Password?</p>
-                <a-button class="btn" v-on:click="login()">Login</a-button>
-                <footer class="new-user">
-                  <p>New user: </p>
-                  <a href="#" v-on:click="signup()">Create Account</a>
+          <aside class="positionAbsolute authWidget" v-if="isAuthHidden">
+            <section class="sign-in whiteBg positionRelative">
+              <article v-if="authSegment === 'signUp'">
+                <h4 class="heading textCenter">Sign Up</h4>
+                <section class="inputFeed">
+                  <label>Enter Name: </label>
+                  <a-input type="text" placeholder="Name" />
+                </section>
+                <section class="inputFeed">
+                  <label>Enter Email/Mobile Number: </label>
+                  <a-input type="text" placeholder="Email/Mobile Number" />
+                </section>
+                <section class="inputFeed">
+                  <label>Enter Password: </label>
+                  <a-input type="password" placeholder="Password" />
+                </section>
+                <a-button class="ctaBtn" v-on:click="signUp()">Create Account</a-button>
+                <footer class="altCta dFlex">
+                  <p>Existing user ? </p>
+                  <a class="txtBtn" v-on:click="authSegment = 'signIn'">Sign in</a>
                 </footer>
-              </section>
-            </a-card>
+              </article>
+              <article v-else-if="authSegment === 'forgetPassword'">
+                <h4 class="heading textCenter">Forgot Password</h4>
+                <section class="inputFeed">
+                  <label>Enter Email/Mobile Number: </label>
+                  <a-input type="text" placeholder="Email/Mobile Number" />
+                </section>
+                <a-button class="ctaBtn" v-on:click="forgotPassword()">Submit</a-button>
+                <footer class="altCta dFlex">
+                  <p>Back to Login : </p>
+                  <a class="txtBtn" v-on:click="authSegment = 'signIn'">Sign in</a>
+                </footer>
+              </article>
+              <article v-else>
+                <h4 class="heading textCenter">Sign In</h4>
+                <section class="inputFeed">
+                  <label>Enter Email/Mobile Number: </label>
+                  <a-input type="text" placeholder="Email/Mobile Number" />
+                </section>
+                <section class="inputFeed">
+                  <label>Password: </label>
+                  <a-input type="password" placeholder="Password" />
+                </section>
+                <aside class="textCenter mb10">
+                  <a class="txtBtn" v-on:click="authSegment = 'forgetPassword'">Forget Password?</a>
+                </aside>
+                <a-button class="ctaBtn" v-on:click="login()">Login</a-button>
+                <footer class="altCta dFlex">
+                  <p>New user ? </p>
+                  <a class="txtBtn" v-on:click="authSegment = 'signUp'">Create Account</a>
+                </footer>
+              </article>
+            </section>
           </aside>
         </transition>
-        <!--
-        <template>
-          <a-dropdown :trigger="['click']">
-            <a class="ant-dropdown-link" @click.prevent>
-              <button>Login / Sign Up</button>
-              <DownOutlined />
-            </a>
-            <template #overlay>
-              <a-menu class="menu">
-                <a-menu-item key="0" class="login-item">
-                 <div class="sign-in">
-                   <p class="heading">SIGN IN</p>
-                  <div class="fields">
-                    <div class="email">
-                      <label>Email/Mobile Number: </label>
-                      <input type="email" placeholder="Email/Mobile Number" v-model="email"/>
-                    </div>
-                    <div class="password">
-                      <label>Password: </label>
-                      <input type="password" placeholder="Password" v-model="password"/>
-                    </div>
-                  </div>
-                   <p style="color: #ff7a34;">Forget Password?</p>
-                    <a-button class="btn" v-on:click="login()">Login</a-button>
-                    <div class="new-user">
-                      <p>New user: </p>
-                      <a href="#" v-on:click="signup()">Create Account</a>
-                    </div>
-                 </div>
-                </a-menu-item>
-              </a-menu>
-            </template>
-          </a-dropdown>
-        </template>
-        -->
       </section>
     </section>
   </header>
@@ -114,8 +111,6 @@
 
 
 <script>
-// import { defineComponent } from 'vue';
-// import { down } from '@ant-design/icons-vue';
 import axios from 'axios';
 export default {
   name: "TopBar",
@@ -123,6 +118,7 @@ export default {
     return {
       isAuthHidden: false,
       scrollPosition: null,
+      authSegment: "signIn",
       email: "",
       password: "",
       username: "",
@@ -131,6 +127,15 @@ export default {
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+    },
+    onSearch: function (e) {
+      alert(e);
+    },
+    signUp: function () {
+      alert("Sing Up");
+    },
+    forgotPassword: function () {
+      alert("Forgot Password");
     },
     async login(){
       console.log("login is clicked");
@@ -197,6 +202,12 @@ export default {
 .positionAbsolute {
   position: absolute;
 }
+.whiteBg {
+  background-color: white;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
 .topBar {
   z-index: 20;
   position: fixed;
@@ -231,15 +242,9 @@ export default {
   position: relative;
   top: 8px;
 }
-.authWidget {
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 .form {
   width: 916px;
   padding: 6px 12px;
-  background-color: white;
   border-radius: 30px;
   @media (max-width: 1619px) {
     width: 816px;
@@ -305,76 +310,71 @@ export default {
     padding: 12px 16px;
   }
 }
-
-.sign-in {
-  width: 220px;
-  padding: 10px;
+.authWidget {
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
+.sign-in {
+  width: 280px;
+  padding: 12px 16px;
+  box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.2);
+  &:after {
+    content:'';
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 20px);
+    width: 0;
+    height: 0;
+    border-bottom: solid 20px white;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+  }
+}
 .heading {
   color: #ff7a34;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 8px;
   text-transform: uppercase;
 }
-.fields{
-  margin-bottom: 10px;
+.textCenter {
+  text-align: center;
 }
-.email,.password{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10px;
+.txtBtn {
+  color: #ff7a34;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all ease 200ms;
+  &:hover {
+    font-weight: 500;
+  }
 }
-
-.email input{
-  border: 2px solid #E1E1E1;
-  padding: 5px;
+.inputFeed {
+  margin-bottom: 12px;
+  label {
+    font-size: 13px;
+  }
 }
-.password input{
-  border: 2px solid #E1E1E1;
-  padding: 5px;
-}
-
-.email label{
-  font-size: 0.8rem;
-  color: black;
-  font-weight:600;
-}
-.password label{
-  font-size: 0.8rem;
-  color: black;
-  font-weight: 600;
-}
-
-.btn{
+.ctaBtn {
   background-color: #ff7a34;
   color: white;
   padding: 6px 16px;
+  margin-bottom: 10px;
   outline: none;
   border: none;
   border-radius: 24px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.2px;
-  font-size: 0.8rem;
+  font-size: 14px;
   cursor: pointer;
   width: 100%;
 }
-.btn:hover{
-  background-color: #ff7a34;
-  color: white;
-}
-.new-user{
-  display: flex;
-  margin-top: 10px;
-}
-.new-user p{
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0px 5px;
-}
-
-.new-user a{
-  color: #ff7a34;
-  text-decoration: underline;
+.altCta p {
+  font-size: 14px;
+  padding-right: 5px;
+  font-weight: 400;
 }
 </style>
