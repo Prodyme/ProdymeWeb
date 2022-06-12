@@ -111,7 +111,7 @@
 
 
 <script>
-import axios from 'axios';
+import {mapGetters, mapActions, mapMutations} from "vuex";
 export default {
   name: "TopBar",
   data: function () {
@@ -125,6 +125,12 @@ export default {
     };
   },
   methods: {
+    ...mapMutations("checkin", {
+      setLogin: MUTATIONS.CheckIn.SetLoginInfo
+    }),
+    ...mapActions("checkin", {
+      loadSkuSellerZoneCode: ACTIONS.CheckIn.LoadLoginInfo
+    }),
     updateScroll() {
       this.scrollPosition = window.scrollY;
     },
@@ -137,24 +143,15 @@ export default {
     forgotPassword: function () {
       alert("Forgot Password");
     },
-    async login(){
-      console.log("login is clicked");
-      // console.log(this.email, this.password);
-
-      let result = await axios.get(`https://jsonplaceholder.typicode.com/users?email=${this.email}&username=${this.password}`)
-      console.warn(result);
-
-      if(result.status === 200 && result.data.length>0){
-        alert("successful login");
-        // let dropDown = document.getElementsByClassName("ant-dropdown-link");
-        // let accountBtn = document.createElement("button");
-        // let t = document.createTextNode("CLICK ME");
-        // accountBtn.appendChild(t);
-        // dropDown.appendChild(accountBtn);
-      }
-    },
+    login: function () {
+      alert("Login")
+    }
   },
-
+  computed: {
+    ...mapGetters("shazam", {
+      sku: GETTERS.Shazam.GetSKU,
+    }),
+  },
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
   },
