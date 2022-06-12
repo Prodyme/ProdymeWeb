@@ -10,11 +10,13 @@
         </header>
         <section
           class="form mxAuto dFlex"
-          :class="{
+        >
+          <!--
+            :class="{
             classA: scrollPosition < 100,
             classB: scrollPosition > 100,
           }"
-        >
+          -->
           <header class="selectText">
             <p>Category :</p>
           </header>
@@ -48,11 +50,11 @@
             <p>{{ aman.link }}</p>
           </section>-->
         
-        <figure v for="option in options" :key="option.title" class="noMargin">
+        <figure v-for="option in options" :key="option.title" class="noMargin">
           <header class="cardVisual">
             <lottie-animation
               ref="anim"
-              :animationData="require('@/assets/json/builder.json')"
+              :animationData="require('@/assets/json/' + option.icon + '.json')"
               :loop="true"
               :autoPlay="true"
               :speed="1"
@@ -64,10 +66,9 @@
             </header>
             <section class="listNone">
               <ul class="listNone">
-                <li>Kitchen</li>
-                <li>Bedroom</li>
-                <li>Living Room</li>
-                <li>Wardrobe</li>
+                <li v-for="opt in option.optsList" :key="opt.index">
+                  {{ opt }}
+                </li>
               </ul>
               <p>More ...</p>
             </section>
@@ -138,7 +139,7 @@ export default {
     return {
       options:[
         {
-            url:"@/assets/json/builder.json",
+            icon:"builder",
             title:"Try our Smart Builder",
             optsList:[
               "Kitchen",
@@ -150,7 +151,7 @@ export default {
             link:"more..."
         },
         {
-            url:"@/assets/json/products.json",
+            icon:"products",
             title:"Browse Products",
             optsList:[
               "Kitchen Baskets",
@@ -162,7 +163,7 @@ export default {
             link:"more..."
         },
         {
-            url:"@/assets/json/help.json",
+            icon:"help",
             title:"Explore our Services",
             optsList:[
               "Carpenter",

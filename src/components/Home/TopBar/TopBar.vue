@@ -109,6 +109,7 @@
   </header>
 </template>
 <script>
+import {ACTIONS, GETTERS, MUTATIONS} from "../../../types/index.js";
 import {mapGetters, mapActions, mapMutations} from "vuex";
 export default {
   name: "TopBar",
@@ -146,8 +147,8 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("shazam", {
-      sku: GETTERS.Shazam.GetSKU,
+    ...mapGetters("checkin", {
+      login: GETTERS.CheckIn.GetLoginInfo
     }),
   },
   mounted() {

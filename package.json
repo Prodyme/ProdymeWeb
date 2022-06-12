@@ -1,5 +1,5 @@
 {
-  "name": "wrhouz",
+  "name": "Prodyme",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,8 +16,8 @@
     "@fortawesome/vue-fontawesome": "^2.0.6",
     "@vue/composition-api": "^1.4.9",
     "ant-design-vue": "^1.7.8",
-    "buttercms": "^1.2.9",
     "axios": "^0.27.2",
+    "buttercms": "^1.2.9",
     "core-js": "^3.20.0",
     "jquery": "^3.6.0",
     "lottie-web-vue": "^1.2.1",
@@ -33,6 +33,7 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
