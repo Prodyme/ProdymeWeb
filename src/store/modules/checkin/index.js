@@ -5,16 +5,16 @@ import { MUTATIONS, ACTIONS, GETTERS } from "@/types";
 export default {
     namespaced: true,
     state: {
-        login: null
+        loggedIn: null
     },
     getters: {
         [GETTERS.CheckIn.GetLoginInfo](state) {
-            return state.login;
+            return state.loggedIn;
         }
     },
     mutations: {
         [MUTATIONS.CheckIn.SetLoginInfo](state, data) {
-            state.mantisInfo = data;
+            state.loggedIn = data;
         }
     },
     actions: {
