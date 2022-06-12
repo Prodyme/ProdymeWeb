@@ -39,25 +39,13 @@
     </main>
     <section class="productCards">
       <nav class="cardGrid container">
-        <!--<section v-for="aman in options" :key="aman.index">
-            <a href="#">{{ aman.url }}</a>
-            <h4>{{ aman.title }}</h4>
-            <ol>
-              <li v-for="sandeep in aman.optsList" :key="sandeep.index">
-                {{ sandeep }}
-              </li>
-            </ol>
-            <p>{{ aman.link }}</p>
-          </section>-->
-        
+        <!-- Iterated over the options data -->
         <figure v-for="option in options" :key="option.title" class="noMargin">
           <header class="cardVisual">
             <lottie-animation
               ref="anim"
               :animationData="require('@/assets/json/' + option.icon + '.json')"
-              :loop="true"
-              :autoPlay="true"
-              :speed="1"
+              :loop="true" :autoPlay="true" :speed="1"
             />
           </header>
           <figcaption class="cardContent p20">
@@ -74,58 +62,6 @@
             </section>
           </figcaption>
         </figure>
-        
-        <!--
-        <figure class="noMargin">
-          <header class="cardVisual">
-            <lottie-animation
-              ref="anim"
-              :animationData="require('@/assets/json/products.json')"
-              :loop="true"
-              :autoPlay="true"
-              :speed="1"
-            />
-          </header>
-          <figcaption class="cardContent p20">
-            <header>
-              <h4>Browse Products</h4>
-            </header>
-            <section class="listNone">
-              <ul class="listNone">
-                <li>Kitchen Baskets</li>
-                <li>Plywood</li>
-                <li>Pain & Wallpaper</li>
-                <li>Tiles</li>
-              </ul>
-              <p>More ...</p>
-            </section>
-          </figcaption>
-        </figure>
-         <figure class="noMargin">
-          <header class="cardVisual">
-            <lottie-animation
-              ref="anim"
-              :animationData="require('@/assets/json/help.json')"
-              :loop="true"
-              :autoPlay="true"
-              :speed="1"
-            />
-          </header>
-          <figcaption class="cardContent p20">
-            <header>
-              <h4>Explore our Services</h4>
-            </header>
-            <section class="listNone">
-              <ul class="listNone">
-                <li>Carpenter</li>
-                <li>Painter</li>
-                <li>Plumber</li>
-                <li>Electrician</li>
-              </ul>
-              <p>More ...</p>
-            </section>
-          </figcaption>
-        </figure>-->
       </nav>
     </section>
   </section>
@@ -187,18 +123,6 @@ export default {
     },
   },
 };
-/*items = ref{ "url":"@/assets/json/builder.json", "title":"Try our Smart Builder", "optsList":[ "Kitchen", "Bedroom", "Living Room", "Toilet", "Wardrobe"], "link":"more..." }, { "url":"@/assets/json/products.json", "title":"Browse Products", "optsList":[ "Kitchen Baskets", "Hinges & Drawers", "Plywood", "Paint & Wallpaper", "Tiles and Flooring" ], "link":"more..." }, {"url":"@/assets/json/help.json", "title":"Explore our Services", "optsList":["Carpenter", "Painter", "Plumber", "Electrician", "Upholstery" ],"link":"more..." :}]
-          <section v-for="aman in options">
-            <a href="#"> {{ aman.url }}</a>
-            <h4>{{ aman.title }}</h4>
-            <ol>
-              <li v-for="sandeep in aman.optsList">
-                {{ sandeep }}
-              </li>
-            </ol>
-            <p>{{ aman.link }}</p>
-          </section>
-*/
 </script>
 
 <style lang="scss">
