@@ -4,31 +4,32 @@
       <section class="container">
         <header class="head">
           <h1>
-            Welcome to <strong>Prodyme</strong>,
-            <br>your all-in-one construction solution.
+            Welcome to <strong>Prodyme</strong>, <br />your all-in-one
+            construction solution.
           </h1>
         </header>
-        <section class="form mxAuto dFlex"
-          :class="{'classA': scrollPosition < 100, 'classB': scrollPosition > 100}">
+        <section
+          class="form mxAuto dFlex"
+          :class="{
+            classA: scrollPosition < 100,
+            classB: scrollPosition > 100,
+          }"
+        >
           <header class="selectText">
-            <p>
-              Category :
-            </p>
+            <p>Category :</p>
           </header>
           <section class="inputSelection">
             <a-input-group compact>
               <a-select style="width: 25%" default-value="all">
-                <a-select-option value="all">
-                  All
-                </a-select-option>
-                <a-select-option value="handles">
-                  Handles
-                </a-select-option>
-                <a-select-option value="hinges">
-                  Hinges
-                </a-select-option>
+                <a-select-option value="all"> All </a-select-option>
+                <a-select-option value="handles"> Handles </a-select-option>
+                <a-select-option value="hinges"> Hinges </a-select-option>
               </a-select>
-              <a-input-search style="width: 75%" placeholder="Search Categories" @search="onSearch"/>
+              <a-input-search
+                style="width: 75%"
+                placeholder="Search Categories"
+                @search="onSearch"
+              />
             </a-input-group>
           </section>
         </section>
@@ -36,19 +37,30 @@
     </main>
     <section class="productCards">
       <nav class="cardGrid container">
-        <figure class="noMargin">
+        <!--<section v-for="aman in options" :key="aman.index">
+            <a href="#">{{ aman.url }}</a>
+            <h4>{{ aman.title }}</h4>
+            <ol>
+              <li v-for="sandeep in aman.optsList" :key="sandeep.index">
+                {{ sandeep }}
+              </li>
+            </ol>
+            <p>{{ aman.link }}</p>
+          </section>-->
+        
+        <figure v for="option in options" :key="option.title" class="noMargin">
           <header class="cardVisual">
             <lottie-animation
-                ref="anim"
-                :animationData="require('@/assets/json/builder.json')"
-                :loop="true"
-                :autoPlay="true"
-                :speed="1"
+              ref="anim"
+              :animationData="require('@/assets/json/builder.json')"
+              :loop="true"
+              :autoPlay="true"
+              :speed="1"
             />
           </header>
           <figcaption class="cardContent p20">
             <header>
-              <h4>Try our Smart Builder</h4>
+              <h4>{{option.title}}</h4>
             </header>
             <section class="listNone">
               <ul class="listNone">
@@ -61,14 +73,16 @@
             </section>
           </figcaption>
         </figure>
+        
+        <!--
         <figure class="noMargin">
           <header class="cardVisual">
             <lottie-animation
-                ref="anim"
-                :animationData="require('@/assets/json/products.json')"
-                :loop="true"
-                :autoPlay="true"
-                :speed="1"
+              ref="anim"
+              :animationData="require('@/assets/json/products.json')"
+              :loop="true"
+              :autoPlay="true"
+              :speed="1"
             />
           </header>
           <figcaption class="cardContent p20">
@@ -86,14 +100,14 @@
             </section>
           </figcaption>
         </figure>
-        <figure class="noMargin">
+         <figure class="noMargin">
           <header class="cardVisual">
             <lottie-animation
-                ref="anim"
-                :animationData="require('@/assets/json/help.json')"
-                :loop="true"
-                :autoPlay="true"
-                :speed="1"
+              ref="anim"
+              :animationData="require('@/assets/json/help.json')"
+              :loop="true"
+              :autoPlay="true"
+              :speed="1"
             />
           </header>
           <figcaption class="cardContent p20">
@@ -110,42 +124,97 @@
               <p>More ...</p>
             </section>
           </figcaption>
-        </figure>
+        </figure>-->
       </nav>
     </section>
   </section>
 </template>
 
 <script>
-import LottieAnimation from 'lottie-web-vue';
+import LottieAnimation from "lottie-web-vue";
 export default {
   name: "Banner",
+  data() {
+    return {
+      options:[
+        {
+            url:"@/assets/json/builder.json",
+            title:"Try our Smart Builder",
+            optsList:[
+              "Kitchen",
+              "Bedroom",
+              "Living Room",
+              "Toilet",
+              "Wardrobe"
+            ],
+            link:"more..."
+        },
+        {
+            url:"@/assets/json/products.json",
+            title:"Browse Products",
+            optsList:[
+              "Kitchen Baskets",
+              "Hinges & Drawers",
+              "Plywood",
+              "Paint & Wallpaper",
+              "Tiles and Flooring"
+            ],
+            link:"more..."
+        },
+        {
+            url:"@/assets/json/help.json",
+            title:"Explore our Services",
+            optsList:[
+              "Carpenter",
+              "Painter",
+              "Plumber",
+              "Electrician",
+              "Upholstery"
+            ],
+            link:"more..."
+        }
+      ]
+    };
+  },
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    LottieAnimation
+    LottieAnimation,
   },
   methods: {
     onSearch(value) {
       console.log(value);
-    }
-  }
-}
+    },
+  },
+};
+/*items = ref{ "url":"@/assets/json/builder.json", "title":"Try our Smart Builder", "optsList":[ "Kitchen", "Bedroom", "Living Room", "Toilet", "Wardrobe"], "link":"more..." }, { "url":"@/assets/json/products.json", "title":"Browse Products", "optsList":[ "Kitchen Baskets", "Hinges & Drawers", "Plywood", "Paint & Wallpaper", "Tiles and Flooring" ], "link":"more..." }, {"url":"@/assets/json/help.json", "title":"Explore our Services", "optsList":["Carpenter", "Painter", "Plumber", "Electrician", "Upholstery" ],"link":"more..." :}]
+          <section v-for="aman in options">
+            <a href="#"> {{ aman.url }}</a>
+            <h4>{{ aman.title }}</h4>
+            <ol>
+              <li v-for="sandeep in aman.optsList">
+                {{ sandeep }}
+              </li>
+            </ol>
+            <p>{{ aman.link }}</p>
+          </section>
+*/
 </script>
+
 <style lang="scss">
 .form {
   .ant-select-selection-selected-value {
-    color: #FF7A34;
+    color: #ff7a34;
     font-weight: 600;
     font-size: 16px;
   }
   .anticon.anticon-search.ant-input-search-icon {
-    color: #FF7A34;
+    color: #ff7a34;
   }
   .ant-select-selection {
     border-left: none;
     border-top: none;
     border-bottom: none;
-    border-right: 1px solid #D9D9D9;
+    border-right: 1px solid #d9d9d9;
   }
   .ant-select-open {
     .ant-select-selection {
@@ -180,17 +249,21 @@ export default {
       border: none;
       box-shadow: none;
     }
-    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: #FF7A34;
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #ff7a34;
     }
-    ::-moz-placeholder { /* Firefox 19+ */
-      color: #FF7A34;
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ff7a34;
     }
-    :-ms-input-placeholder { /* IE 10+ */
-      color: #FF7A34;
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #ff7a34;
     }
-    :-moz-placeholder { /* Firefox 18- */
-      color: #FF7A34;
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: #ff7a34;
     }
   }
 }
@@ -292,13 +365,14 @@ figure.noMargin {
 }
 .productCards h4 {
   margin-bottom: 16px;
-  color: #2A2A2A;
+  color: #2a2a2a;
   font-size: 28px;
   font-weight: bold;
 }
-.productCards ul li, .productCards p {
+.productCards ul li,
+.productCards p {
   font-size: 16px;
-  color: #2A2A2A;
+  color: #2a2a2a;
   text-transform: capitalize;
 }
 .listNone ul {
@@ -309,7 +383,8 @@ figure.noMargin {
 .listNone ul li {
   margin-bottom: 12px;
   &:hover {
-    color: #FF7A34;
+    cursor: pointer;
+    color: #ff7a34;
   }
 }
 @media (max-width: 1080px) {
