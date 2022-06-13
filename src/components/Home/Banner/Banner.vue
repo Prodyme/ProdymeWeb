@@ -82,7 +82,8 @@ export default {
               "Bedroom",
               "Living Room",
               "Toilet",
-              "Wardrobe"
+              "Wardrobe",
+              "Anything",
             ],
             link:"more..."
         },
