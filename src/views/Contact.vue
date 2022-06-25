@@ -40,12 +40,12 @@
             <a-col :span="12" class="p-l-1p">
               <small>State*</small>
               <div>
-                <a-select default-value="lucy" style="width: 100%" @change="handleChange">
-                  <a-select-option value="jack">
-                    Jack
+                <a-select default-value="New Delhi" class="state-option" style="width: 100%" @change="handleChange">
+                  <a-select-option value="New Delhi">
+                    New Delhi
                   </a-select-option>
-                  <a-select-option value="lucy">
-                    Lucy
+                  <a-select-option value="Mumbai">
+                    Mumbai
                   </a-select-option>
                 </a-select>
                 <!-- <a-select default-value="lucy" style="width: 120px" disabled>
@@ -99,7 +99,7 @@
               </a-col>
               <a-col :span="12" class="p-l-1p files-format">
                 <br>
-                <p>
+                <p class="file">
                   File Type supported: .pdf, .png, .docx, .jpg, .txt, .mp4, .HEIC</p>
                 <p>
                   Size: less than 5MB</p>
@@ -132,7 +132,6 @@
         </div>
       </div>
     </div>
-    <Login/>
     <Footer />
   </section>
 </template>
@@ -140,12 +139,11 @@
 <script>
 // @ is an alias to /src
 import Footer from "@/components/Global/Footer.vue";
-import Login from "@/views/Login.vue";
+
 export default {
   name: 'Contact',
   components: {
     Footer,
-    Login
   }
 }
 </script>
@@ -274,6 +272,170 @@ small {
     float: right;
   }
 }
+
+@media (max-width: 1024px){
+  .files-format{
+    font-size: 10px;
+    padding-bottom: 2px;
+    line-height: 1;
+  } 
+}
+
+@media (max-width: 868px) {
+  .contact-main {
+    margin: 39px;
+    width: 90%;
+  }
+  .input-part{
+    padding: 80px 75px;
+  }
+  .p-l-1p {
+    /* padding-left: 0%; */
+    width: 50%;
+  }
+
+  .p-r-1p {
+    /* padding-right: 0%; */
+    width: 48%;
+  }
+  .custom-upload-btn{
+    button {
+      width: 90%;
+    }
+
+    .place-holder {
+      font-size: 11px;
+    }
+
+    .upload-icon {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 708px){
+  .custom-upload-btn{
+    button {
+      width: 95%;
+    }
+
+    .place-holder {
+      font-size: 11px;
+    }
+
+    .upload-icon {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 684px){
+  .custom-upload-btn{
+    button {
+      width: 97%;
+    }
+  }
+}
+@media (max-width: 578px){
+  .state-option{
+    font-size: 12px;
+  }
+  .input-part{
+    padding: 80px 60px;
+  }
+  .custom-upload-btn{
+    button {
+      width: 95%;
+      padding: 6px;
+    }
+
+    .place-holder {
+      font-size: 10px;
+    }
+
+    .upload-icon {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 425px){
+  .state-option{
+    font-size: 12px;
+  }
+  .input-part{
+    padding: 80px 27px;
+  }
+  .contact-main {
+    margin: auto;
+    width: 91%;
+  }
+  .custom-upload-btn{
+    button {
+      width: 100%;
+      padding: 6px;
+    }
+
+    .place-holder {
+      font-size: 7px;
+    }
+
+    .upload-icon {
+      font-size: 7px;
+    }
+  }
+  .files-format{
+    font-size: 8px;
+  } 
+  .ant-btn-primary{
+    margin-left: 40px;
+  }
+  .ant-input{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px){
+  .state-option{
+    font-size: 12px;
+  }
+  .input-part{
+    padding: 80px 20px;
+  }
+  .contact-main {
+    margin: auto;
+    width: 95%;
+  }
+}
+@media (max-width: 320px){
+  .state-option{
+    font-size: 12px;
+  }
+  .input-part{
+    padding: 80px 8px;
+  }
+  .contact-main {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 280px){
+  .state-option{
+    font-size: 12px;
+  }
+  .input-part{
+    padding: 80px 3px;
+  }
+  .contact-us{
+    margin: 15px;
+  }
+  .contact-main {
+    margin: auto;
+    width: 100%;
+  }
+}
+
 </style>
 <style>
 .ant-upload.ant-upload-select {
