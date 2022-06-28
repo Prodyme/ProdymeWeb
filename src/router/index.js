@@ -10,7 +10,8 @@ import Designs from "@/views/Design.vue";
 import Wishlist from "@/views/Wishlist.vue";
 import Messages from "@/views/Messages.vue";
 import SmartBuilder from "@/views/SmartBuilder.vue"
-import SmartBuilderBasket from "@/views/SmartBuilderBasket.vue"
+import SmartBuilderBasket from "@/views/SmartBuilderBasket.vue";
+import FAQs from "@/views/FAQs.vue";
 
 Vue.use(VueRouter)
 
@@ -73,6 +74,11 @@ const routes = [
     name: 'SmartBuilderBasket',
     component: SmartBuilderBasket
   },
+  {
+    path: '/FAQs',
+    name: 'FAQs',
+    component: FAQs
+  }
   // {
   //   path: '/about',
   //   name: 'About',
